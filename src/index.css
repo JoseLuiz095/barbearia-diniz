@@ -1,0 +1,22 @@
+:root {
+  --vermelho: #EE2C3F;
+  --amarelo: #EE2C3F;
+  --azul: #507DBC;
+  --contraste-de-fundo: #171721;
+  --fundo: #0E111A;
+  --branco: #ffff;
+}
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Anonymous Pro", monospace;
+    color: var(--branco);
+  }
+  
+  html,body,#root{
+    background-color: #0E111A;
+    height: 100%;
+  }

@@ -1,0 +1,15 @@
+:root {
+    --vermelho: #EE2C3F;
+    --amarelo: #EE2C3F;
+    --azul: #507DBC;
+    --contraste-de-fundo: #171721;
+    --fundo: #0E111A;
+    --branco: #fff;
+  }
+
+.navbar{
+    background-color: var(--contraste-de-fundo) !important;
+    margin: 0 .5rem;
+    border-radius: 12px;
+    color: var(--branco) ;
+}
