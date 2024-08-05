@@ -7,9 +7,10 @@ import "./Navbar.css"
 
 const Navbar = () => {
     return (
-        <nav className="navbar navbar-expand-lg bg-body-tertiary sticky-top">
-            <div className="container-fluid">
-                <a className="navbar-brand" href="#">
+
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid d-flex justify-content-around">
+                <a class="navbar-brand" href="#">
                     <img
                         src={logo}
                         alt="Bootstrap logo"
@@ -19,10 +20,10 @@ const Navbar = () => {
                     />
                     <h1>Barbearia do Diniz</h1>
                 </a>
-                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                    <span className="navbar-toggler-icon"></span>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
                 </button>
-                <div className="collapse navbar-collapse" id="navbarNavDropdown">
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
                     <ul className="navbar-nav">
                         <li className="nav-item">
                             <Link className="nav-link active" aria-current="page" to="home" smooth={true} duration={1000}>
