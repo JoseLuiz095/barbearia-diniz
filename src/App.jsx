@@ -8,21 +8,23 @@ import Agendamento from './components/Agenda';
 
 const App = () => {
   return (
-    <div>
+    <>
       <Navbar />
-      <Element name="home">
-        <Home />
-      </Element>
-      <Element name="sobre">
-        <Sobre />
-      </Element>
-      <Element name="depoimentos">
-        <Depoimentos />
-      </Element>
-      <Element name="agenda">
-        <Agendamento />
-      </Element>
-    </div>
+      <div>
+        <Element name="home">
+          <Home />
+        </Element>
+        <Element name="sobre">
+          <Sobre />
+        </Element>
+        <Element name="depoimentos">
+          <Depoimentos />
+        </Element>
+        <Element name="agenda">
+          <Agendamento />
+        </Element>
+      </div>
+    </>
   );
 }
 

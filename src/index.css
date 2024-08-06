@@ -6,17 +6,33 @@
   --fundo: #0E111A;
   --branco: #ffff;
 }
-
-
 *{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: "Anonymous Pro", monospace;
-    color: var(--branco);
-  }
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Anonymous Pro", monospace;
+  color: var(--branco);
+}
+html,body,#root{
+  background-color: #0E111A;
+  height: 100%;
+}
   
-  html,body,#root{
-    background-color: #0E111A;
-    height: 100%;
-  }
+::-webkit-scrollbar {
+  width: 8px;
+  background-color: var(--fundo);
+  height: 15px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--vermelho);
+  border-radius: 5px;
+  border: solid 1px var(--contraste-de-fundo);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--vermelho);
+}
+
+
+  

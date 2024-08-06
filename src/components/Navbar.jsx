@@ -1,47 +1,96 @@
-import React from 'react';
-import { Link } from 'react-scroll';
+import React, { useState } from 'react'; // Importa React e useState do pacote react.
+import { Link } from 'react-scroll'; // Importa o componente Link para navegação suave.
+import { FaBars, FaTimes } from 'react-icons/fa'; // Importa ícones FaBars (menu) e FaTimes (fechar) do pacote react-icons.
 
-
-import logo from '../img/logo.png';
-import "./Navbar.css"
+import logo from '../img/logo.png'; // Importa a imagem do logo para ser exibido na barra de navegação.
+import "./Navbar.css"; // Importa o arquivo de estilos CSS para o componente Navbar.
 
 const Navbar = () => {
-    return (
+    // Declara um estado para controlar se o menu está colapsado ou não.
+    const [isNavCollapsed, setIsNavCollapsed] = useState(true);
 
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid d-flex justify-content-around">
-                <a class="navbar-brand" href="#">
+    // Função que será chamada quando um link do menu for clicado.
+    // Fecha o menu definindo isNavCollapsed como true.
+    const handleNavLinkClick = () => {
+        setIsNavCollapsed(true);
+    };
+
+    // Função que alterna o estado de colapso do menu.
+    // Se o menu está colapsado, ele será expandido, e vice-versa.
+    const handleTogglerClick = () => {
+        setIsNavCollapsed(!isNavCollapsed);
+    };
+
+    return (
+        <div className="navbar_container">
+            <nav className="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+            <div className="container-fluid">
+                {/* Link para a marca da barra de navegação, que inclui o logo e o nome da empresa */}
+                <a className="navbar-brand d-flex align-items-center" href="#">
                     <img
-                        src={logo}
-                        alt="Bootstrap logo"
-                        width="40"
-                        height="40"
-                        className="d-inline-block align-text-top"
+                        src={logo} // Logo da barbearia.
+                        alt="Logo da barbearia Diniz" // Texto alternativo para a imagem.
+                        width="40" // Largura da imagem.
+                        height="40" // Altura da imagem.
+                        className="d-inline-block align-text-top" // Classe CSS para alinhar o logo.
                     />
-                    <h1>Barbearia do Diniz</h1>
+                    <h1 className="ms-2">Barbearia do Diniz</h1> {/* Nome da empresa ao lado do logo */}
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                {/* Botão para alternar o menu (abrir/fechar) */}
+                <button className="navbar-toggler" type="button" onClick={handleTogglerClick} aria-controls="navbarTogglerDemo03" aria-expanded={!isNavCollapsed} aria-label="Toggle navigation">
+                    {/* Exibe FaBars se o menu estiver colapsado, e FaTimes se estiver expandido */}
+                    {isNavCollapsed ? <FaBars size={24} /> : <FaTimes size={24} />}
                 </button>
-                <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                {/* Div que contém o menu de navegação. Ela é colapsada se isNavCollapsed for true */}
+                <div className={`${isNavCollapsed ? 'collapse' : ''} navbar-collapse justify-content-lg-end`} id="navbarTogglerDemo03">
                     <ul className="navbar-nav">
+                        {/* Lista de links de navegação */}
                         <li className="nav-item">
-                            <Link className="nav-link active" aria-current="page" to="home" smooth={true} duration={1000}>
+                            <Link
+                                className="nav-link active"
+                                aria-current="page"
+                                to="home"
+                                smooth={true}
+                                duration={1000}
+                                offset={-82}
+                                onClick={handleNavLinkClick} // Fecha o menu ao clicar no link.
+                            >
                                 Home
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" to="sobre" smooth={true} duration={1000}>
+                            <Link
+                                className="nav-link"
+                                to="sobre"
+                                smooth={true}
+                                duration={1000}
+                                offset={-82}
+                                onClick={handleNavLinkClick}
+                            >
                                 Sobre
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" to="depoimentos" smooth={true} duration={1000}>
+                            <Link
+                                className="nav-link"
+                                to="depoimentos"
+                                smooth={true}
+                                duration={1000}
+                                offset={-82}
+                                onClick={handleNavLinkClick}
+                            >
                                 Depoimentos
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" to="agenda" smooth={true} duration={1000}>
+                            <Link
+                                className="nav-link"
+                                to="agenda"
+                                smooth={true}
+                                duration={1000}
+                                offset={-82}
+                                onClick={handleNavLinkClick}
+                            >
                                 Agendamento
                             </Link>
                         </li>
@@ -49,7 +98,8 @@ const Navbar = () => {
                 </div>
             </div>
         </nav>
+        </div>
     );
 };
 
-export default Navbar;
+export default Navbar; // Exporta o componente Navbar para ser usado em outros lugares.
