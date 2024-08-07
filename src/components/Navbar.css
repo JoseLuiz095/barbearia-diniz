@@ -57,6 +57,7 @@
   padding: 10px 0;
 }
 
+
 @media (min-width: 992px) {
   .navbar-collapse {
     flex-direction: row;
@@ -66,11 +67,16 @@
   .navbar-nav {
     width: auto;
     text-align: left;
+    padding-right: .5rem;
   }
   
   .nav-item {
     width: auto;
   }
+  .active{
+  font-weight: bold;
+  border-bottom:2px solid #fff;
+}
 }
 
 @media (max-width: 992px) {
