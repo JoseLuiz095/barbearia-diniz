@@ -1,6 +1,6 @@
 :root {
   --vermelho: #EE2C3F;
-  --amarelo: #EE2C3F;
+  --amarelo: #F9CB40;
   --azul: #507DBC;
   --contraste-de-fundo: #171721;
   --fundo: #0E111A;
@@ -34,5 +34,7 @@ html,body,#root{
   background-color: var(--vermelho);
 }
 
-
+.btn-danger{
+  background-color: var(--vermelho);
+}
   

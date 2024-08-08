@@ -24,14 +24,16 @@
   cursor: pointer;
 }
 
-.navbar-brand {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+.navbar-brand .img {
+  margin-left:  12px;
 }
-
-.navbar-brand img {
-  margin: 0 20px;
+.navbar-brand h1{
+  font-weight: bold;
+  font-size: 32px;
+  margin: auto 2%;
+}
+.navbar-brand nav-link{
+  font-size: 36px;
 }
 
 
@@ -89,6 +91,10 @@
     margin: 5%;
     border: 1.5px solid var(--vermelho);
     transition: padding 0.8s;
+  }
+  .navbar-brand h1{
+    font-weight: bold;
+    font-size: 30px;
   }
   .show {
     -webkit-animation-name: zoomIn;

@@ -1,24 +1,35 @@
 import "./Home.css"
 import React from 'react'
 import capa from '../img/capa.png';
+import { Link } from 'react-scroll';
 const Home = () => {
   return (
     <section className='container' id='home'>
-      <div className="d-flex justify-content-around align-items-center">
+      <div className="container-capa d-flex justify-content-around align-items-center">
         <img
           src={capa}
           alt="Capa da barbearia diniz"
-          width="45%"
-          height="45%"
-          className="d-inline-block p-4"
+          width="40%"
+          height="40%"
+          className="d-inline-block capa bounceInLeft"
         />
-        <div className='m-4 d-flex flex-column justify-content-center align-items-center'>
-          <h2 >
-            Aqui é barba, cabelo e bigode!
+        <div className='gatilho bounceInRight d-flex flex-column  align-items-center'>
+          <h2>
+            Aqui é barba, cabelo e bigode! <br/>
             Venha dar aquele tapa no visual
           </h2>
 
-          <a class="btn btn-danger" aria-disabled="true">Agende Online</a>
+          <Link
+            className="btn btn-danger"
+            id="botao"
+            to="agenda"
+            smooth={true}
+            duration={1000}
+            offset={-82}
+            aria-disabled="true"
+          >
+            Agende Online
+          </Link>
         </div>
 
       </div>

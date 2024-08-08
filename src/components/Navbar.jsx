@@ -34,9 +34,9 @@ const Navbar = () => {
                             alt="Logo da barbearia Diniz" // Texto alternativo para a imagem.
                             width="40" // Largura da imagem.
                             height="40" // Altura da imagem.
-                            className="d-inline-block align-text-top" // Classe CSS para alinhar o logo.
+                            className='img'
                         />
-                        <h1 className="ms-2">Barbearia do Diniz</h1> {/* Nome da empresa ao lado do logo */}
+                        <h1 >Barbearia do Diniz</h1> {/* Nome da empresa ao lado do logo */}
                     </a>
                     {/* Botão para alternar o menu (abrir/fechar) */}
                     <button className="navbar-toggler" type="button" onClick={handleTogglerClick} aria-controls="navbarTogglerDemo03" aria-expanded={!isNavCollapsed} aria-label="Toggle navigation">
