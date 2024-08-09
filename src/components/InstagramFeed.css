@@ -1,74 +1,35 @@
 .profile-ring {
     position: relative;
     display: inline-block;
-    width: 155px;
-    height: 155px;
-    border-radius: 50%;
-    overflow: hidden;
+    width: 150px;
+    height: 150px;
   }
-  
-  .profile-ring-background {
+  .circulo-storys {
     position: absolute;
-    top: -10px;
-    left: -10px;
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
-    background-size: 200% 200%;
-    animation: spin 10s linear infinite;
+    top: -2.5%;
+    left: -2.5%;
+    width: 105%;
+    height: 105%;
+    animation: spin 5s linear infinite;
     z-index: 1;
   }
-  
-  .profile-ring img {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
+  .descricao span{
+    padding: 0 20px;
+  }
+  .img-post{
+    height: 100% !important;
+    border-radius: 12px;
+  }
+  .profile-image {
     position: relative;
     z-index: 2;
   }
   
   @keyframes spin {
-    0% {
-      background-position: 0% 50%;
+    from {
+      transform: rotate(0deg);
     }
-    100% {
-      background-position: 100% 50%;
-    }
-  }
-  
-  /* Responsividade */
-  @media (max-width: 576px) {
-    .profile-ring {
-      width: 120px;
-      height: 120px;
-    }
-  
-    .profile-ring img {
-      width: 120px;
-      height: 120px;
-    }
-  
-    .profile-ring-background {
-      top: -8px;
-      left: -8px;
+    to {
+      transform: rotate(360deg);
     }
   }
-  
-  @media (min-width: 577px) and (max-width: 768px) {
-    .profile-ring {
-      width: 130px;
-      height: 130px;
-    }
-  
-    .profile-ring img {
-      width: 130px;
-      height: 130px;
-    }
-  
-    .profile-ring-background {
-      top: -9px;
-      left: -9px;
-    }
-  }
-  

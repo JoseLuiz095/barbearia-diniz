@@ -1,61 +1,79 @@
-import React, { useState } from 'react'; // Importa React e useState do pacote react.
-import { Link } from 'react-scroll'; // Importa o componente Link para navegação suave.
-import { FaBars, FaTimes } from 'react-icons/fa'; // Importa ícones FaBars (menu) e FaTimes (fechar) do pacote react-icons.
-
-import logo from '../img/logo.png'; // Importa a imagem do logo para ser exibido na barra de navegação.
-import "./Navbar.css"; // Importa o arquivo de estilos CSS para o componente Navbar.
+import React, { useState, useEffect } from 'react'; // Adiciona useEffect
+import { Link } from 'react-scroll';
+import { FaBars, FaTimes } from 'react-icons/fa';
+import logo from '../img/logo.jpg';
+import "./Navbar.css";
 
 const Navbar = () => {
-    // Declara um estado para controlar se o menu está colapsado ou não.
     const [isNavCollapsed, setIsNavCollapsed] = useState(true);
-    const [activeLink, setActiveLink] = useState('home'); // Estado para rastrear o link ativo
+    const [activeLink, setActiveLink] = useState('home');
 
-    // Função que será chamada quando um link do menu for clicado.
-    // Fecha o menu definindo isNavCollapsed como true.
     const handleNavLinkClick = (link) => {
         setIsNavCollapsed(true);
-        setActiveLink(link); // Atualiza o link ativo
+        setActiveLink(link);
     };
 
-    // Função que alterna o estado de colapso do menu.
-    // Se o menu está colapsado, ele será expandido, e vice-versa.
     const handleTogglerClick = () => {
         setIsNavCollapsed(!isNavCollapsed);
     };
+
+    useEffect(() => {
+        const sections = document.querySelectorAll('section');
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        const id = entry.target.getAttribute('id');
+                        setActiveLink(id);
+                    }
+                });
+            },
+            { threshold: 0.6 } // O link fica ativo quando 60% da seção é visível
+        );
+
+        sections.forEach((section) => {
+            observer.observe(section);
+        });
+
+        return () => {
+            observer.disconnect();
+        };
+    }, []);
 
     return (
         <div className="navbar_container">
             <nav className="navbar navbar-expand-lg bg-body-tertiary fixed-top">
                 <div className="container-fluid">
-                    {/* Link para a marca da barra de navegação, que inclui o logo e o nome da empresa */}
                     <a className="navbar-brand d-flex align-items-center" href="#">
                         <img
-                            src={logo} // Logo da barbearia.
-                            alt="Logo da barbearia Diniz" // Texto alternativo para a imagem.
-                            width="40" // Largura da imagem.
-                            height="40" // Altura da imagem.
+                            src={logo}
+                            alt="Logo da barbearia Diniz"
+                            width="40"
+                            height="40"
                             className='img'
                         />
-                        <h1 >Barbearia do Diniz</h1> {/* Nome da empresa ao lado do logo */}
+                        <h1>Barbearia do Diniz</h1>
                     </a>
-                    {/* Botão para alternar o menu (abrir/fechar) */}
-                    <button className="navbar-toggler" type="button" onClick={handleTogglerClick} aria-controls="navbarTogglerDemo03" aria-expanded={!isNavCollapsed} aria-label="Toggle navigation">
-                        {/* Exibe FaBars se o menu estiver colapsado, e FaTimes se estiver expandido */}
+                    <button
+                        className="navbar-toggler"
+                        type="button"
+                        onClick={handleTogglerClick}
+                        aria-controls="navbarTogglerDemo03"
+                        aria-expanded={!isNavCollapsed}
+                        aria-label="Toggle navigation"
+                    >
                         {isNavCollapsed ? <FaBars size={24} /> : <FaTimes size={24} />}
                     </button>
-                    {/* Div que contém o menu de navegação. Ela é colapsada se isNavCollapsed for true */}
                     <div className={`${isNavCollapsed ? 'collapse' : ''} navbar-collapse justify-content-lg-end`} id="navbarTogglerDemo03">
                         <ul className="navbar-nav">
-                            {/* Lista de links de navegação */}
                             <li className="nav-item">
                                 <Link
                                     className={`nav-link ${activeLink === 'home' ? 'active' : ''}`}
-                                    aria-current="page"
                                     to="home"
                                     smooth={true}
                                     duration={1000}
                                     offset={-82}
-                                    onClick={() => handleNavLinkClick('home')} // Atualiza o link ativo ao clicar no link.
+                                    onClick={() => handleNavLinkClick('home')}
                                 >
                                     Home
                                 </Link>
@@ -67,7 +85,7 @@ const Navbar = () => {
                                     smooth={true}
                                     duration={1000}
                                     offset={-82}
-                                    onClick={() => handleNavLinkClick('sobre')} // Atualiza o link ativo ao clicar no link.
+                                    onClick={() => handleNavLinkClick('sobre')}
                                 >
                                     Sobre
                                 </Link>
@@ -79,7 +97,7 @@ const Navbar = () => {
                                     smooth={true}
                                     duration={1000}
                                     offset={-82}
-                                    onClick={() => handleNavLinkClick('depoimentos')} // Atualiza o link ativo ao clicar no link.
+                                    onClick={() => handleNavLinkClick('depoimentos')}
                                 >
                                     Depoimentos
                                 </Link>
@@ -91,7 +109,7 @@ const Navbar = () => {
                                     smooth={true}
                                     duration={1000}
                                     offset={-82}
-                                    onClick={() => handleNavLinkClick('agenda')} // Atualiza o link ativo ao clicar no link.
+                                    onClick={() => handleNavLinkClick('agenda')}
                                 >
                                     Agendamento
                                 </Link>
@@ -104,4 +122,4 @@ const Navbar = () => {
     );
 };
 
-export default Navbar; // Exporta o componente Navbar para ser usado em outros lugares.
+export default Navbar;

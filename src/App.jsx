@@ -5,6 +5,7 @@ import Home from './components/Home';
 import Sobre from './components/Sobre';
 import Depoimentos from './components/Depoimento';
 import Agendamento from './components/Agenda';
+import SectionWrapper from './components/SectionWrapper';
 
 const App = () => {
   return (
@@ -12,16 +13,24 @@ const App = () => {
       <Navbar />
       <div>
         <Element name="home">
-          <Home />
+          <SectionWrapper>
+            <Home />
+          </SectionWrapper>
         </Element>
         <Element name="sobre">
-          <Sobre />
+          <SectionWrapper>
+            <Sobre />
+          </SectionWrapper>
         </Element>
         <Element name="depoimentos">
-          <Depoimentos />
+          <SectionWrapper>
+            <Depoimentos />
+          </SectionWrapper>
         </Element>
         <Element name="agenda">
-          <Agendamento />
+          <SectionWrapper>
+            <Agendamento />
+          </SectionWrapper>
         </Element>
       </div>
     </>

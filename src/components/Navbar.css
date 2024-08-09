@@ -14,6 +14,7 @@
 .navbar {
   background-color: var(--contraste-de-fundo) !important;
   margin: 0 .5rem;
+  padding: 0 4%;
   border-radius: 12px;
   display: block;
 }
@@ -26,6 +27,7 @@
 
 .navbar-brand .img {
   margin-left:  12px;
+  border-radius: 100%;
 }
 .navbar-brand h1{
   font-weight: bold;

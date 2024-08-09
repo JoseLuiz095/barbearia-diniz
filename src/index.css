@@ -36,5 +36,36 @@ html,body,#root{
 
 .btn-danger{
   background-color: var(--vermelho);
+  padding: 0 6%;
+    margin-top: 10px;
+    border-radius: 22px;
 }
-  
+.animate-hidden {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.5s ease-out;
+}
+
+.animate-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.animate-on-scroll {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.zoomIn {
+  opacity: 1;
+  transform: scale(1);
+  transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+}
+
+.animate-visible {
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+}
+
+.animate-hidden {
+  opacity: 0;
+}
