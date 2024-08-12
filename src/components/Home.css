@@ -1,22 +1,23 @@
 #home{
     margin-top: 82px;
+    max-width: 100%;
 }
 .capa{
     padding: 4%;
 }
 .gatilho{
-    margin: 5%;
+    margin: 10% 5%;
 }
 .gatilho h2 , 
 .gatilho #botao{
     font-weight: bold;
-    font-size: 32px;
+    padding-bottom: 10%;
+    font-size: 120%;
     text-align: center;
-    font-family: "Crimson Text", serif;
 }
 .gatilho #botao{
-    font-size: 30px;
-    padding: 0 6%;
+    font-size: 120%;
+    padding: 2% 10%;
     margin-top: 10px;
     border-radius: 22px;
 }
@@ -149,26 +150,15 @@
     transform: none;
     }
     } 
-
-@media (max-width: 992px) {
-    .container-capa{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+    @media (max-width: 992px) {
+        .container-capa{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        #home{
+            margin: 25% 0;
+        }
+    
     }
-    .gatilho h2 , 
-    .gatilho #botao{
-    font-weight: bold;
-    font-size: 30px;
-    text-align: center;
-    font-family: "Crimson Text", serif;
-}
-    .gatilho #botao{
-    font-size: 22px;
-    padding: 0 6%;
-    margin-top: 10px;
-    border-radius: 22px;
-}
-
-}

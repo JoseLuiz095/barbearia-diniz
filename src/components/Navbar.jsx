@@ -41,7 +41,7 @@ const Navbar = () => {
     }, []);
 
     return (
-        <div className="navbar_container">
+        <div className="navbar_container test">
             <nav className="navbar navbar-expand-lg bg-body-tertiary fixed-top">
                 <div className="container-fluid">
                     <a className="navbar-brand d-flex align-items-center" href="#">
@@ -64,7 +64,7 @@ const Navbar = () => {
                     >
                         {isNavCollapsed ? <FaBars size={24} /> : <FaTimes size={24} />}
                     </button>
-                    <div className={`${isNavCollapsed ? 'collapse' : ''} navbar-collapse justify-content-lg-end`} id="navbarTogglerDemo03">
+                    <div className={`${isNavCollapsed ? 'collapse' : 'show'} navbar-collapse justify-content-lg-end`} id="navbarTogglerDemo03">
                         <ul className="navbar-nav">
                             <li className="nav-item">
                                 <Link
@@ -92,14 +92,14 @@ const Navbar = () => {
                             </li>
                             <li className="nav-item">
                                 <Link
-                                    className={`nav-link ${activeLink === 'depoimentos' ? 'active' : ''}`}
-                                    to="depoimentos"
+                                    className={`nav-link ${activeLink === 'feedBack' ? 'active' : ''}`}
+                                    to="feedBack"
                                     smooth={true}
                                     duration={1000}
                                     offset={-82}
-                                    onClick={() => handleNavLinkClick('depoimentos')}
+                                    onClick={() => handleNavLinkClick('feedBack')}
                                 >
-                                    Depoimentos
+                                    FeedBack
                                 </Link>
                             </li>
                             <li className="nav-item">

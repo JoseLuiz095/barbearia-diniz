@@ -25,11 +25,10 @@ const Sobre = () => {
             Descubra histórias por trás dos bastidores, promoções exclusivas e muito mais. Não perca nenhum detalhe!<br />
             Siga-nos agora mesmo para estar sempre conectado. Estamos ansiosos para interagir com você!
           </h3>
-          <a href="https://www.instagram.com/dinizbarbershopp/" className="btn btn-danger">Instagram</a>
+          <a href="https://www.instagram.com/dinizbarbershopp/" className="btn btn-info">Instagram</a>
         </div>
-        <div className="col-md-6">
-          <InstagramFeed />
-        </div>
+        <InstagramFeed />
+        
       </div>
     </section>
   );

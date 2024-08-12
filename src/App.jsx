@@ -3,7 +3,7 @@ import { Element } from 'react-scroll';
 import Navbar from './components/Navbar';
 import Home from './components/Home';
 import Sobre from './components/Sobre';
-import Depoimentos from './components/Depoimento';
+import FeedBack from './components/FeedBack';
 import Agendamento from './components/Agenda';
 import SectionWrapper from './components/SectionWrapper';
 
@@ -22,9 +22,9 @@ const App = () => {
             <Sobre />
           </SectionWrapper>
         </Element>
-        <Element name="depoimentos">
+        <Element name="feedBack">
           <SectionWrapper>
-            <Depoimentos />
+            <FeedBack />
           </SectionWrapper>
         </Element>
         <Element name="agenda">

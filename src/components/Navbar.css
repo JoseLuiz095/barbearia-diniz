@@ -1,19 +1,22 @@
 :root {
   --vermelho: #EE2C3F;
-  --amarelo: #F5C32C;
+  --amarelo: #F9CB40;
   --azul: #507DBC;
-  --contraste-de-fundo: #171721;
-  --fundo: #0E111A;
-  --branco: #fff;
+  --contraste-de-fundo: #0E111A;
+  --fundo: #000000;
+  --branco: #ffff;
+  
 }
 
 .navbar_container{
   display: block;
+  
 }
 
 .navbar {
+  max-width: 100%;
+  margin: 0 1%;
   background-color: var(--contraste-de-fundo) !important;
-  margin: 0 .5rem;
   padding: 0 4%;
   border-radius: 12px;
   display: block;
@@ -26,13 +29,13 @@
 }
 
 .navbar-brand .img {
-  margin-left:  12px;
   border-radius: 100%;
 }
 .navbar-brand h1{
   font-weight: bold;
-  font-size: 32px;
+  font-size: 100%;
   margin: auto 2%;
+  color: var(--azul) !important;
 }
 .navbar-brand nav-link{
   font-size: 36px;
@@ -90,14 +93,15 @@
     align-items: center;
     padding: 10px 20vw;
     border-radius: 15px;
-    margin: 5%;
+    margin: 8% 5%;
     border: 1.5px solid var(--vermelho);
     transition: padding 0.8s;
   }
   .navbar-brand h1{
     font-weight: bold;
-    font-size: 30px;
+    font-size: 100%;
   }
+  
   .show {
     -webkit-animation-name: zoomIn;
     animation-name: zoomIn;

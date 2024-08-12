@@ -9,8 +9,8 @@ const Home = () => {
         <img
           src={capa}
           alt="Capa da barbearia diniz"
-          width="40%"
-          height="40%"
+          width="45%"
+          height="45%"
           className="d-inline-block capa bounceInLeft"
         />
         <div className='gatilho bounceInRight d-flex flex-column  align-items-center'>
@@ -20,7 +20,7 @@ const Home = () => {
           </h2>
 
           <Link
-            className="btn btn-danger"
+            className="btn btn-info"
             id="botao"
             to="agenda"
             smooth={true}
