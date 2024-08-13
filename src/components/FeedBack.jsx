@@ -4,17 +4,19 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import './FeedBack.css'; 
 
-// Suponha que os ícones de perfil estão armazenados na pasta 'assets'
 import post01 from '../img/icon-perfil.png'; 
-// import post02 from './assets/post02.jpg'; 
-// import post03 from './assets/post03.jpg'; 
-
 
 const feedbacks = [
-  { id: 1, image: post01, name: 'Diniz', description: 'Descrição do feedback do Diniz' },
-  { id: 2, image: post01, name: 'Cliente 2', description: 'Descrição do feedback do Cliente 2' },
-  { id: 3, image: post01, name: 'Cliente 3', description: 'Descrição do feedback do Cliente 3' },
-  // Adicione mais objetos conforme necessário
+  { id: 1, image: post01, name: 'Carlos Souza', description: 'Atendimento excelente e corte impecável. Recomendo!' },
+  { id: 2, image: post01, name: 'Marcos Lima', description: 'Corte de cabelo perfeito, exatamente como eu queria.' },
+  { id: 3, image: post01, name: 'Ricardo Fernandes', description: 'Ambiente agradável e profissionais de primeira linha.' },
+  { id: 4, image: post01, name: 'Gustavo Oliveira', description: 'Saí muito satisfeito com o resultado. Ótima barbearia!' },
+  { id: 5, image: post01, name: 'Felipe Santos', description: 'Melhor corte que já fiz, com certeza voltarei.' },
+  { id: 6, image: post01, name: 'Rafael Silva', description: 'Serviço rápido e de alta qualidade. Nota 10!' },
+  { id: 7, image: post01, name: 'André Almeida', description: 'Profissionais muito qualificados. Fiquei impressionado.' },
+  { id: 8, image: post01, name: 'Lucas Martins', description: 'O corte ficou exatamente como eu pedi. Excelente trabalho!' },
+  { id: 9, image: post01, name: 'Thiago Costa', description: 'A barbearia tem um ambiente incrível e o corte ficou ótimo.' },
+  { id: 10, image: post01, name: 'Bruno Rocha', description: 'Atendimento personalizado e corte de alta qualidade. Recomendo muito!' },
 ];
 
 const FeedBack = () => {
@@ -24,6 +26,11 @@ const FeedBack = () => {
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 5000,
+    arrows: false,
+    centerMode: true,
+    centerPadding: '0px',
     responsive: [
       {
         breakpoint: 1024,
@@ -35,9 +42,9 @@ const FeedBack = () => {
         }
       },
       {
-        breakpoint: 600,
+        breakpoint: 768,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 3,
           slidesToScroll: 1,
           dots: true
         }
@@ -45,7 +52,7 @@ const FeedBack = () => {
       {
         breakpoint: 480,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 3,
           slidesToScroll: 1,
           dots: true
         }
@@ -54,7 +61,7 @@ const FeedBack = () => {
   };
 
   return (
-    <section className="feedBack" id="FeedBack">
+    <section className="feedBack" id="feedBack">
       <div className="text-center">
         <h2 className="title">FeedBack</h2>
       </div>
