@@ -13,7 +13,11 @@
   margin: 6% 1%;
 }
 
+<<<<<<< HEAD
 #feedBack {
+=======
+.feedBack {
+>>>>>>> 1372e9fd96c1330ce8ea89185f3a41196dd68e2b
   margin-top: 5rem;
 }
 
@@ -23,10 +27,17 @@
   padding: 5%;
   text-align: center;
   transition: all 0.5s ease;
+<<<<<<< HEAD
   border: 1px solid var(--azul); 
   max-width: 75%;
   height: 100%;
   margin: 35% auto;
+=======
+  border: 1px solid var(--vermelho); 
+  max-width: 75%;
+  height: 100%;
+  margin: 50% auto;
+>>>>>>> 1372e9fd96c1330ce8ea89185f3a41196dd68e2b
 }
 
 .carousel .card:hover {
@@ -61,6 +72,7 @@
 }
 
 .carousel .card .text {
+<<<<<<< HEAD
   font-size: 100%;
   font-weight: 500;
   margin-bottom: 4%;
@@ -121,3 +133,14 @@
   animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
   }
   } 
+=======
+  font-size: 70%;
+  font-weight: 500;
+  margin: 10px 0 7px 0;
+}
+.carousel .card p {
+  font-size: 60%;
+  font-weight: 500;
+  margin: 10px 0 7px 0;
+}
+>>>>>>> 1372e9fd96c1330ce8ea89185f3a41196dd68e2b

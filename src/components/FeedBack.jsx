@@ -67,7 +67,11 @@ const FeedBack = () => {
   
 
   return (
+<<<<<<< HEAD
     <section ref={ref} className={`${inView ? 'zoomInUp' : ''}`} id="feedBack">
+=======
+    <section className="feedBack" id="feedBack">
+>>>>>>> 1372e9fd96c1330ce8ea89185f3a41196dd68e2b
       <div className="text-center">
         <h2 className="title">FeedBack</h2>
       </div>
