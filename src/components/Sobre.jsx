@@ -12,7 +12,7 @@ const Sobre = () => {
   return (
     <section
       ref={ref}
-      className={`animate-on-scroll ${inView ? 'zoomIn' : ''}`}
+      className={`${inView ? 'zoomIn' : ''}`}
       id='sobre'
     >
       <h1>Sobre</h1>

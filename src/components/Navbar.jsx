@@ -1,17 +1,12 @@
-import React, { useState, useEffect } from 'react'; // Adiciona useEffect
+import "./Navbar.css";
+import logo from '../img/logo.jpg';
 import { Link } from 'react-scroll';
 import { FaBars, FaTimes } from 'react-icons/fa';
-import logo from '../img/logo.jpg';
-import "./Navbar.css";
+import React, { useState, useEffect } from 'react';
 
 const Navbar = () => {
     const [isNavCollapsed, setIsNavCollapsed] = useState(true);
     const [activeLink, setActiveLink] = useState('home');
-
-    const handleNavLinkClick = (link) => {
-        setIsNavCollapsed(true);
-        setActiveLink(link);
-    };
 
     const handleTogglerClick = () => {
         setIsNavCollapsed(!isNavCollapsed);
@@ -41,7 +36,7 @@ const Navbar = () => {
     }, []);
 
     return (
-        <div className="navbar_container test">
+        <div className="navbar_container">
             <nav className="navbar navbar-expand-lg bg-body-tertiary fixed-top">
                 <div className="container-fluid">
                     <a className="navbar-brand d-flex align-items-center" href="#">
@@ -73,7 +68,7 @@ const Navbar = () => {
                                     smooth={true}
                                     duration={1000}
                                     offset={-82}
-                                    onClick={() => handleNavLinkClick('home')}
+                                    onClick={() => setIsNavCollapsed(true)}
                                 >
                                     Home
                                 </Link>
@@ -85,7 +80,7 @@ const Navbar = () => {
                                     smooth={true}
                                     duration={1000}
                                     offset={-82}
-                                    onClick={() => handleNavLinkClick('sobre')}
+                                    onClick={() => setIsNavCollapsed(true)}
                                 >
                                     Sobre
                                 </Link>
@@ -97,7 +92,7 @@ const Navbar = () => {
                                     smooth={true}
                                     duration={1000}
                                     offset={-82}
-                                    onClick={() => handleNavLinkClick('feedBack')}
+                                    onClick={() => setIsNavCollapsed(true)}
                                 >
                                     FeedBack
                                 </Link>
@@ -109,7 +104,7 @@ const Navbar = () => {
                                     smooth={true}
                                     duration={1000}
                                     offset={-82}
-                                    onClick={() => handleNavLinkClick('agenda')}
+                                    onClick={() => setIsNavCollapsed(true)}
                                 >
                                     Agendamento
                                 </Link>
