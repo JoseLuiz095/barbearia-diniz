@@ -12,7 +12,7 @@ const Sobre = () => {
   return (
     <section
       ref={ref}
-      className={`${inView ? 'zoomIn' : ''}`}
+      className={`${inView ? 'flipInY' : ''}`}
       id='sobre'
     >
       <h1>Sobre</h1>

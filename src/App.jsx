@@ -5,6 +5,7 @@ import Home from './components/Home';
 import Sobre from './components/Sobre';
 import FeedBack from './components/FeedBack';
 import Agendamento from './components/Agenda';
+import Footer from './components/Footer';
 import SectionWrapper from './components/SectionWrapper';
 
 const App = () => {
@@ -33,6 +34,7 @@ const App = () => {
           </SectionWrapper>
         </Element>
       </div>
+      <Footer/>
     </>
   );
 }

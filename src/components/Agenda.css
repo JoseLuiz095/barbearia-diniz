@@ -7,71 +7,75 @@
     --branco: #ffff;
   }
   
-  #agenda {
-    background-color: var(--fundo);
-    color: var(--branco);
-  }
-  
-  .teste {
-    display: flex;
-    justify-content: space-between;
-    padding: 4%;
-  }
-  
-  .left, .right {
-    width: 48%;
+  .agenda-section {
+    position: relative;
+    border-radius: 22px;
     background-color: var(--contraste-de-fundo);
-    border-radius: 22px;
     padding: 4%;
+    margin: 6% 1%;
+    max-width: 100%;
   }
   
-  .left h1, .right h1 {
+  .agenda-section h1 {
+    position: absolute;
+    top: -20px; left: 50%;
+    transform: translateX(-50%);
     color: var(--azul);
-    margin-bottom: 10px;
+    font-weight: bold;
+    margin-bottom: 0;
   }
   
-  .form-group {
-    margin-bottom: 15px;
+  .container-agenda {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
   }
   
-  input[type='text'], input[type='date'], input[type='time'] {
+  .map-container {
+    position: relative;
+    width: 60%;
+    height: auto;
+    border-radius: 15px;
+    overflow: hidden;
+  }
+  
+  .map-container iframe {
     width: 100%;
-    padding: 10px;
-    border-radius: 22px;
-    border: 1px solid var(--azul);
-    background-color: var(--fundo);
-    color: var(--branco);
+    height: 300px;
+    border: none;
+    border-radius: 15px;
   }
   
-  button {
+  .btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .btn {
     background-color: var(--azul);
     color: var(--branco);
-    border: none;
-    border-radius: 22px;
     padding: 10px 20px;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: var(--vermelho);
-  }
-  
-  .services label {
-    display: block;
-  }
-  
-  .confirmation-message {
+    border-radius: 22px;
+    font-size: 1.2rem;
+    font-weight: bold;
     text-align: center;
+    text-decoration: none;
   }
   
   @media (max-width: 992px) {
-    .container {
+    .container-agenda {
       flex-direction: column;
+      align-items: center;
     }
   
-    .left, .right {
+    .map-container {
       width: 100%;
       margin-bottom: 20px;
+    }
+  
+    .btn-container {
+      margin-top: 20px;
     }
   }
   

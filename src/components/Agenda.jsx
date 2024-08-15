@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useInView } from 'react-intersection-observer';
 import './Agenda.css';
 
@@ -8,91 +8,24 @@ const Agenda = () => {
     threshold: 0.3,
   });
 
-  const [formData, setFormData] = useState({ name: '', phone: '', services: [], totalDuration: 0, date: '', time: '' });
-  const [confirmation, setConfirmation] = useState(false);
-
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
-  };
-
-  const handleServiceChange = (e) => {
-    const { value, checked } = e.target;
-    const { services } = formData;
-    if (checked) {
-      setFormData({ ...formData, services: [...services, value], totalDuration: formData.totalDuration + parseInt(value, 10) });
-    } else {
-      setFormData({ ...formData, services: services.filter(service => service !== value), totalDuration: formData.totalDuration - parseInt(value, 10) });
-    }
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Implementar a integração com Google Calendar e pagamento via Pix aqui.
-    // Após o sucesso, definir a confirmação para true e enviar mensagem ao WhatsApp.
-    setConfirmation(true);
-  };
-
   return (
-    <section
-      ref={ref}
-      className={`${inView ? 'zoomIn' : ''}`}
-      id='agenda'
-    >
-      <div className='teste'>
-        <div className='left'>
-          <h1>Localização</h1>
-          <p>Endereço: Rua Exemplo, 123</p>
-          <p>Bairro: Centro</p>
-          <p>Cidade: Exemplo</p>
+    <section ref={ref} className={`agenda-section ${inView ? 'flipInY' : ''}`} id='agenda'>
+      <h1>Agendamento</h1>
+      <div className="container-agenda">
+        <div className="map-container">
+          {/* Substitua o src com o link do mapa do Google Maps */}
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7481.604451680747!2d-43.679891852842864!3d-20.349787409483035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa407bf5af350d3%3A0xfd1bd2073007f6fd!2sDiniz%20Barbershop!5e0!3m2!1spt-BR!2sbr!4v1723742393541!5m2!1spt-BR!2sbr" 
+            title="Localização"
+            allowFullScreen=""
+            className='localização'
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            >
+          </iframe>
         </div>
-        <div className='right'>
-          <h1>Agendamento</h1>
-          {confirmation ? (
-            <div className='confirmation-message'>
-              <h2>Agendamento Confirmado!</h2>
-              <button onClick={() => setConfirmation(false)}>Voltar</button>
-            </div>
-          ) : (
-            <form onSubmit={handleSubmit}>
-              <div className='form-group'>
-                <label>Nome:</label>
-                <input type='text' name='name' value={formData.name} onChange={handleInputChange} required />
-              </div>
-              <div className='form-group'>
-                <label>Telefone:</label>
-                <input type='text' name='phone' value={formData.phone} onChange={handleInputChange} required />
-              </div>
-              <div className='form-group'>
-                <label>Serviços:</label>
-                <div className='services'>
-                  <label>
-                    <input type='checkbox' value='30' onChange={handleServiceChange} />
-                    Serviço A (30 min)
-                  </label>
-                  <label>
-                    <input type='checkbox' value='60' onChange={handleServiceChange} />
-                    Serviço B (60 min)
-                  </label>
-                  {/* Adicione mais serviços conforme necessário */}
-                </div>
-              </div>
-              <div className='form-group'>
-                <label>Total de Tempo:</label>
-                <p>{formData.totalDuration} minutos</p>
-              </div>
-              <div className='form-group'>
-                <label>Data:</label>
-                <input type='date' name='date' value={formData.date} onChange={handleInputChange} required />
-              </div>
-              <div className='form-group'>
-                <label>Hora:</label>
-                <input type='time' name='time' value={formData.time} onChange={handleInputChange} required />
-              </div>
-              <button type='submit'>Confirmar Agendamento</button>
-            </form>
-          )}
-          <button className='back-button'>Voltar</button>
+        <div className="btn-container">
+          <button className="btn btn-primary">Agendar Agora!</button>
         </div>
       </div>
     </section>
