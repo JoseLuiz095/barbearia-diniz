@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 
+// Importação de imagens e vídeos
 import logo from '../img/logo.jpg';
 import post01 from '../img/post01-instagramFeed.jpg';
 import post02 from '../img/post02-instagramFeed.jpg';
@@ -11,9 +12,12 @@ import circuloStorys from '../img/circulo-InstagramFeed.png';
 import "./InstagramFeed.css";
 
 const InstagramFeed = () => {
+  // Estados para contagem de publicações, seguidores e seguindo
   const [postCount, setPostCount] = useState(0);
   const [followersCount, setFollowersCount] = useState(0);
   const [followingCount, setFollowingCount] = useState(0);
+
+  // Hook para verificar se o componente está visível na viewport
   const { ref, inView } = useInView({
     triggerOnce: true,
     threshold: 0.3,
@@ -21,6 +25,7 @@ const InstagramFeed = () => {
 
   useEffect(() => {
     if (inView) {
+      // Função para incrementar contadores
       const incrementCount = (setter, maxCount) => {
         let count = 0;
         const interval = setInterval(() => {
@@ -40,8 +45,9 @@ const InstagramFeed = () => {
 
   return (
     <div ref={ref} className="instagram container mt-5">
-      {/* Header do Perfil */}
+      {/* Seção de perfil do Instagram */}
       <div className="perfil d-flex align-items-center mb-4 flex-wrap">
+        {/* Imagem de perfil e círculo de stories */}
         <div className="profile-ring">
           <img src={circuloStorys} alt="Círculo Storys" className="circulo-storys" />
           <img
@@ -50,7 +56,8 @@ const InstagramFeed = () => {
             className="rounded-circle profile-image"
           />
         </div>
-        <div className=" descricao text-center text-md-start">
+        {/* Descrição do perfil */}
+        <div className="descricao text-center text-md-start">
           <h2 className="mb-2 ms-3">dinizbarbershopp</h2>
           <div className="d-flex justify-content-around align-items-center text-center">
             <span className="descricao-text"><strong>{postCount}</strong> publicações</span>
@@ -60,7 +67,7 @@ const InstagramFeed = () => {
         </div>
       </div>
 
-      {/* Grid de Posts */}
+      {/* Grid de posts do Instagram */}
       <div className="row g-2 posts">
         <div className="col-4 col-sm-4 col-md-4">
           <img src={post01} alt="Post 1" className="img-fluid img-post" />

@@ -5,14 +5,14 @@
   --contraste-de-fundo: #0E111A;
   --fundo: #000000;
   --branco: #ffff;
-  
 }
 
-.navbar_container{
+/* Container para a barra de navegação */
+.navbar_container {
   display: block;
-  
 }
 
+/* Estilos da barra de navegação */
 .navbar {
   max-width: 100%;
   margin: 0 1%;
@@ -22,49 +22,27 @@
   display: block;
 }
 
+/* Estilos para o título e links */
 .navbar h1,
 .navbar .nav-link {
   color: var(--branco) !important;
   cursor: pointer;
 }
 
+/* Imagem do logo da marca */
 .navbar-brand .img {
   border-radius: 100%;
 }
-.navbar-brand h1{
+
+/* Estilo para o título da marca */
+.navbar-brand h1 {
   font-weight: bold;
   font-size: 100%;
   margin: auto 2%;
   color: var(--azul) !important;
 }
-.navbar-brand nav-link{
-  font-size: 36px;
-}
 
-
-.container-fluid {
-  justify-content: space-between;
-}
-
-.navbar-collapse {
-  flex-direction: column;
-  align-items: center;
-}
-
-.navbar-nav {
-  width: 100%;
-  text-align: center;
-}
-
-.nav-item {
-  width: 100%;
-}
-
-.nav-link {
-  padding: 10px 0;
-}
-
-
+/* Estilos específicos para telas grandes */
 @media (min-width: 992px) {
   .navbar-collapse {
     flex-direction: row;
@@ -80,12 +58,14 @@
   .nav-item {
     width: auto;
   }
-  .active{
-  font-weight: bold;
-  border-bottom:2px solid #fff;
-}
+  
+  .active {
+    font-weight: bold;
+    border-bottom: 2px solid #fff;
+  }
 }
 
+/* Estilos específicos para telas pequenas */
 @media (max-width: 992px) {
   .nav-link {
     display: flex;
@@ -97,7 +77,8 @@
     border: 1.5px solid var(--vermelho);
     transition: padding 0.8s;
   }
-  .navbar-brand h1{
+  
+  .navbar-brand h1 {
     font-weight: bold;
     font-size: 100%;
   }
@@ -109,26 +90,27 @@
     animation-duration: 1s;
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
-    }
-    @-webkit-keyframes zoomIn {
-    0% {
-    opacity: 0;
-    -webkit-transform: scale3d(.3, .3, .3);
-    transform: scale3d(.3, .3, .3);
-    }
-    50% {
-    opacity: 1;
-    }
-    }
-    @keyframes zoomIn {
-    0% {
-    opacity: 0;
-    -webkit-transform: scale3d(.3, .3, .3);
-    transform: scale3d(.3, .3, .3);
-    }
-    50% {
-    opacity: 1;
-    }
-    } 
   }
-  
+
+  @-webkit-keyframes zoomIn {
+    0% {
+      opacity: 0;
+      -webkit-transform: scale3d(.3, .3, .3);
+      transform: scale3d(.3, .3, .3);
+    }
+    50% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes zoomIn {
+    0% {
+      opacity: 0;
+      -webkit-transform: scale3d(.3, .3, .3);
+      transform: scale3d(.3, .3, .3);
+    }
+    50% {
+      opacity: 1;
+    }
+  }
+}

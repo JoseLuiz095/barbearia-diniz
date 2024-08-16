@@ -1,38 +1,43 @@
 :root {
-    --contraste-de-fundo: #0E111A;
-    --azul: #507DBC;
-    --branco: #ffffff;
-  }
-  
+  --contraste-de-fundo: #0E111A;
+  --azul: #507DBC;
+  --branco: #ffffff;
+}
+
+/* Estilo geral do footer */
+.footer {
+  background-color: var(--contraste-de-fundo);
+  color: var(--branco);
+  text-align: center;
+  padding: 10px 0;
+  border-top: 2px solid var(--azul);
+  font-size: 0.9rem;
+  position: relative;
+}
+
+/* Estilo do parágrafo dentro do footer */
+.footer p {
+  margin: 0;
+}
+
+/* Estilo dos links no footer */
+.footer a {
+  color: var(--branco);
+  text-decoration: none;
+  font-weight: bold;
+  border-bottom: 1px solid var(--azul);
+  transition: color 0.3s ease, border-bottom-color 0.3s ease;
+}
+
+/* Estilo para o hover nos links */
+.footer a:hover {
+  color: var(--azul);
+  border-bottom-color: var(--branco);
+}
+
+/* Estilos responsivos para dispositivos menores */
+@media (max-width: 992px) {
   .footer {
-    background-color: var(--contraste-de-fundo);
-    color: var(--branco);
-    text-align: center;
-    padding: 10px 0;
-    border-top: 2px solid var(--azul);
-    font-size: 0.9rem;
-    position: relative;
-    
+      margin-top: 30%; /* Ajusta a margem superior em telas menores */
   }
-  
-  .footer p {
-    margin: 0;
-  }
-  
-  .footer a {
-    color: var(--branco);
-    text-decoration: none;
-    font-weight: bold;
-    border-bottom: 1px solid var(--azul);
-    transition: color 0.3s ease, border-bottom-color 0.3s ease;
-  }
-  
-  .footer a:hover {
-    color: var(--azul);
-    border-bottom-color: var(--branco);
-  }
-  @media (max-width: 992px) {
-    .footer {
-        margin-top: 30%; 
-    }
-  }
+}

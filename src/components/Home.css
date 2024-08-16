@@ -1,37 +1,47 @@
-#home{
+/* Estilos para a seção Home */
+
+/* Estilos gerais da seção */
+#home {
     margin-top: 82px;
     max-width: 100%;
 }
-.capa{
+
+/* Estilo da imagem de capa */
+.capa {
     padding: 4%;
 }
-.gatilho{
+
+/* Estilo do container de texto promocional */
+.gatilho {
     margin: 10% 5%;
 }
-.gatilho h2 , 
-.gatilho #botao{
+
+/* Estilo do texto e botão dentro do container promocional */
+.gatilho h2, 
+.gatilho #botao {
     font-weight: bold;
     padding-bottom: 10%;
     font-size: 120%;
     text-align: center;
 }
-.gatilho #botao{
+
+/* Estilo específico para o botão de agendamento */
+.gatilho #botao {
     font-size: 120%;
     padding: 2% 10%;
     margin-top: 10px;
     border-radius: 22px;
 }
 
-
-    @media (max-width: 992px) {
-        .container-capa{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
-        #home{
-            margin: 25% 0;
-        }
-    
+/* Responsividade para dispositivos menores */
+@media (max-width: 992px) {
+    .container-capa {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
+    #home {
+        margin: 25% 0;
+    }
+}

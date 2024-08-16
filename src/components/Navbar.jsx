@@ -8,10 +8,12 @@ const Navbar = () => {
     const [isNavCollapsed, setIsNavCollapsed] = useState(true);
     const [activeLink, setActiveLink] = useState('home');
 
+    // Função para alternar o estado do menu de navegação
     const handleTogglerClick = () => {
         setIsNavCollapsed(!isNavCollapsed);
     };
 
+    // UseEffect para observar se as seções estão visíveis e atualizar o link ativo
     useEffect(() => {
         const sections = document.querySelectorAll('section');
         const observer = new IntersectionObserver(

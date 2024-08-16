@@ -4,15 +4,16 @@ import { useInView } from 'react-intersection-observer';
 import "./Sobre.css";
 
 const Sobre = () => {
+  // Hook para detectar quando a seção entra na viewport
   const { ref, inView } = useInView({
-    triggerOnce: true, // Garante que a animação ocorra uma vez
+    triggerOnce: true, // Garante que a animação ocorra apenas uma vez
     threshold: 0.3,    // 30% do componente visível antes de disparar
   });
 
   return (
     <section
       ref={ref}
-      className={`${inView ? 'flipInY' : ''}`}
+      className={`${inView ? 'flipInY' : ''}`} // Adiciona classe de animação se visível
       id='sobre'
     >
       <h1>Sobre</h1>
@@ -27,8 +28,7 @@ const Sobre = () => {
           </h3>
           <a href="https://www.instagram.com/dinizbarbershopp/" className="btn btn-info">Instagram</a>
         </div>
-        <InstagramFeed />
-        
+        <InstagramFeed /> {/* Componente que exibe o feed do Instagram */}
       </div>
     </section>
   );
