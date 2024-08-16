@@ -32,9 +32,11 @@
   padding: 10%;
 }
 .text-sobre a{
-  font-size:100%;
+  font-size: 1.2rem;
   font-weight: bold;
-  padding: 0 20%;
+  text-align: center;
+  text-decoration: none;
+  padding: 10px 20%;
   margin-top: 10px;
   border-radius: 22px;
 }

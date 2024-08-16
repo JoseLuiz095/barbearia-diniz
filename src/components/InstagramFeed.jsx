@@ -5,6 +5,7 @@ import logo from '../img/logo.jpg';
 import post01 from '../img/post01-instagramFeed.jpg';
 import post02 from '../img/post02-instagramFeed.jpg';
 import post03 from '../img/post03-instagramFeed.jpg';
+import post04 from '../img/post04-instagramFeed.mp4';
 import circuloStorys from '../img/circulo-InstagramFeed.png';
 
 import "./InstagramFeed.css";
@@ -68,7 +69,15 @@ const InstagramFeed = () => {
           <img src={post02} alt="Post 2" className="img-fluid img-post" />
         </div>
         <div className="col-4 col-sm-4 col-md-4">
-          <img src={post03} alt="Post 3" className="img-fluid img-post" />
+          <video
+            src={post04}
+            className="img-fluid img-post"
+            autoPlay
+            muted
+            loop
+            playsInline
+            alt="Post 4"
+          />
         </div>
       </div>
     </div>
