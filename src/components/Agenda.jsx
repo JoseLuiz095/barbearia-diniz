@@ -29,7 +29,7 @@ const Agenda = () => {
         </div>
         <div className="btn-container">
           {/* Botão de agendamento que direciona para a página de agendamento */}
-          <button className="btn btn-primary">Agendar Agora!</button>
+          <a href='#' className="btn btn-primary">Agendar Agora!</a>
         </div>
       </div>
     </section>
