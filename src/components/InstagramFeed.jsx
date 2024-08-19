@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 
 // Importação de imagens e vídeos
-import logo from '../img/logo.jpg';
+import logo from '../img/logo.jpeg';
 import post01 from '../img/post01-instagramFeed.jpg';
 import post02 from '../img/post02-instagramFeed.jpg';
 import post03 from '../img/post03-instagramFeed.jpg';
