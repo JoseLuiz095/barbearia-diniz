@@ -31,18 +31,18 @@ const Navbar = () => {
         sections.forEach((section) => {
             observer.observe(section);
         });
-        
+
         return () => {
             observer.disconnect();
         };
-        
+
     }, []);
 
     return (
         <div className="navbar_container">
             <nav className="navbar navbar-expand-lg bg-body-tertiary fixed-top">
                 <div className="container-fluid">
-                    <a className="navbar-brand d-flex align-items-center" href="#">
+                    <a className="navbar-brand d-flex align-items-center" href="##">
                         <img
                             src={logo}
                             alt="Logo da barbearia Diniz"
@@ -66,6 +66,7 @@ const Navbar = () => {
                         <ul className="navbar-nav">
                             <li className="nav-item">
                                 <Link
+                                    href="#home"
                                     className={`nav-link ${activeLink === 'home' ? 'active' : ''}`}
                                     to="home"
                                     smooth={true}
@@ -78,6 +79,7 @@ const Navbar = () => {
                             </li>
                             <li className="nav-item">
                                 <Link
+                                    href="#sobre"
                                     className={`nav-link ${activeLink === 'sobre' ? 'active' : ''}`}
                                     to="sobre"
                                     smooth={true}
@@ -90,6 +92,7 @@ const Navbar = () => {
                             </li>
                             <li className="nav-item">
                                 <Link
+                                    href="#feedBack"
                                     className={`nav-link ${activeLink === 'feedBack' ? 'active' : ''}`}
                                     to="feedBack"
                                     smooth={true}
@@ -102,6 +105,7 @@ const Navbar = () => {
                             </li>
                             <li className="nav-item">
                                 <Link
+                                    href="#agenda"
                                     className={`nav-link ${activeLink === 'agenda' ? 'active' : ''}`}
                                     to="agenda"
                                     smooth={true}
