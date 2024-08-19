@@ -1,5 +1,5 @@
 import "./Navbar.css";
-import logo from '../img/logo.jpg';
+import logo from '../img/logo.jpeg';
 import { Link } from 'react-scroll';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import React, { useState, useEffect } from 'react';
