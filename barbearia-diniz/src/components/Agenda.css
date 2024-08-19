@@ -1,0 +1,82 @@
+/* Variáveis CSS para facilitar a manutenção e troca de cores */
+:root {
+  --vermelho: #EE2C3F;
+  --amarelo: #F9CB40;
+  --azul: #507DBC;
+  --contraste-de-fundo: #0E111A;
+  --fundo: #000000;
+  --branco: #ffff;
+}
+
+/* Estilos para a seção de agendamento */
+.agenda-section {
+  position: relative;
+  border-radius: 22px;
+  background-color: var(--contraste-de-fundo);
+  padding: 4%;
+  margin: 6% 1%;
+  max-width: 100%;
+}
+
+/* Título da seção de agendamento */
+.agenda-section h1 {
+  position: absolute;
+  top: -20px; left: 50%;
+  transform: translateX(-50%);
+  color: var(--azul);
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+/* Estilização do container principal da agenda */
+.container-agenda {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+/* Estilos para o container do Google Maps */
+.map-container {
+  position: relative;
+  width: 45%;
+  height: auto;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+/* Estilos para o iframe do Google Maps */
+.map-container iframe {
+  width: 100%;
+  height: 300px;
+  border: none;
+  border-radius: 15px;
+}
+
+/* Estilos do container do botão de agendamento
+.btn-container {
+  display: flex;
+  justify-content: a;
+  align-items: center;
+} */
+
+/* Estilos do botão de agendamento */
+.btn-container .btn-info{
+  padding: .5rem 2rem;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 992px) {
+  .container-agenda {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .map-container {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .btn-container {
+    margin-top: 20px;
+  }
+}

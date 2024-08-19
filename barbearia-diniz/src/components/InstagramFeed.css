@@ -1,0 +1,76 @@
+.instagram {
+  width: 100%;
+}
+
+/* Estilo para o círculo de stories */
+.profile-ring {
+  position: relative;
+  display: inline-block;
+  width: 25%;
+  height: auto;
+}
+
+/* Animação para o círculo de stories girando */
+.circulo-storys {
+  position: absolute;
+  top: -12%;
+  left: -10%;
+  width: 100%;
+  height: auto;
+  animation: spin 4s linear infinite;
+  z-index: 1;
+}
+
+/* Imagem de perfil */
+.profile-image {
+  width: 80%;
+  height: auto;
+  position: relative;
+  z-index: 2;
+  border-radius: 50%;
+}
+
+/* Descrição do perfil */
+.descricao {
+  flex: 1;
+  width: 10%;
+}
+
+/* Estilo para texto da descrição */
+.descricao-text {
+  display: block;
+  font-size: 80%;
+  width: 100%;
+  margin: 0 10px;
+}
+
+/* Estilo para imagens dos posts */
+.img-post {
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+}
+
+/* Animação de rotação */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Estilos responsivos para dispositivos menores */
+@media (max-width: 555px) {
+  .perfil {
+    justify-content: center; 
+  }
+  .descricao {
+    margin-top: 5%;
+    margin-left: 0 !important;
+  }
+  .descricao h2 {
+    margin: 0 0 .5rem 0;
+  }
+}
