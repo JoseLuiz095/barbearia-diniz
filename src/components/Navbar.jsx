@@ -1,5 +1,5 @@
 import "./Navbar.css";
-import logo from '../img/logo.jpg';
+import logo from '../img/logo.jpeg';
 import { Link } from 'react-scroll';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import React, { useState, useEffect } from 'react';
@@ -15,33 +15,36 @@ const Navbar = () => {
 
     // UseEffect para observar se as seções estão visíveis e atualizar o link ativo
     useEffect(() => {
-        const sections = document.querySelectorAll('section');
+        const sections = document.querySelectorAll('section[id]'); 
         const observer = new IntersectionObserver(
             (entries) => {
                 entries.forEach((entry) => {
                     if (entry.isIntersecting) {
                         const id = entry.target.getAttribute('id');
+                        console.log('Seção visível:', id);
                         setActiveLink(id);
                     }
                 });
             },
-            { threshold: 0.6 } // O link fica ativo quando 60% da seção é visível
+            { threshold: 0.6 }
         );
-
+    
         sections.forEach((section) => {
             observer.observe(section);
         });
-
+    
         return () => {
             observer.disconnect();
         };
     }, []);
+    
+    
 
     return (
         <div className="navbar_container">
             <nav className="navbar navbar-expand-lg bg-body-tertiary fixed-top">
                 <div className="container-fluid">
-                    <a className="navbar-brand d-flex align-items-center" href="#">
+                    <a className="navbar-brand d-flex align-items-center" href="##">
                         <img
                             src={logo}
                             alt="Logo da barbearia Diniz"
@@ -65,6 +68,7 @@ const Navbar = () => {
                         <ul className="navbar-nav">
                             <li className="nav-item">
                                 <Link
+                                    href="#home"
                                     className={`nav-link ${activeLink === 'home' ? 'active' : ''}`}
                                     to="home"
                                     smooth={true}
@@ -77,6 +81,7 @@ const Navbar = () => {
                             </li>
                             <li className="nav-item">
                                 <Link
+                                    href="#sobre"
                                     className={`nav-link ${activeLink === 'sobre' ? 'active' : ''}`}
                                     to="sobre"
                                     smooth={true}
@@ -89,6 +94,7 @@ const Navbar = () => {
                             </li>
                             <li className="nav-item">
                                 <Link
+                                    href="#feedBack"
                                     className={`nav-link ${activeLink === 'feedBack' ? 'active' : ''}`}
                                     to="feedBack"
                                     smooth={true}
@@ -101,6 +107,7 @@ const Navbar = () => {
                             </li>
                             <li className="nav-item">
                                 <Link
+                                    href="#agenda"
                                     className={`nav-link ${activeLink === 'agenda' ? 'active' : ''}`}
                                     to="agenda"
                                     smooth={true}

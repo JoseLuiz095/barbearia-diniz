@@ -11,8 +11,13 @@ import post01 from '../img/icon-perfil.png';
 const feedbacks = [
   { id: 1, image: post01, name: 'Carlos Souza', description: 'Atendimento excelente e corte impecável. Recomendo!' },
   { id: 2, image: post01, name: 'Marcos Lima', description: 'Corte de cabelo perfeito, exatamente como eu queria.' },
+  { id: 3, image: post01, name: 'Ana Paula', description: 'Ambiente agradável e profissionais qualificados. Satisfação garantida!' },
+  { id: 4, image: post01, name: 'Rafael Dias', description: 'Serviço de primeira qualidade. Vou voltar sempre!' },
+  { id: 5, image: post01, name: 'Beatriz Almeida', description: 'Ótimo atendimento e preço justo. Super indico!' },
+  { id: 6, image: post01, name: 'João Pedro', description: 'Profissionais dedicados e corte moderno. Gostei muito!' },
   // Adicione mais feedbacks conforme necessário
 ];
+
 
 const FeedBack = () => {
   // Ref e estado para a animação de entrada quando o componente se torna visível

@@ -8,12 +8,12 @@ const Agenda = () => {
   // Utilizando o hook useInView para aplicar a animação quando a seção estiver visível
   const { ref, inView } = useInView({
     triggerOnce: true, // A animação ocorre apenas uma vez
-    threshold: 0.3, // Inicia a animação quando 30% da seção estiver visível
+    threshold: 0.5, // Inicia a animação quando 30% da seção estiver visível
   });
 
   return (
     // Seção de agendamento, com uma animação de entrada 'flipInY'
-    <section ref={ref} className={`agenda-section ${inView ? 'flipInY' : ''}`} id='agenda'>
+    <section ref={ref} className={`agenda ${inView ? 'flipInY' : ''}`} id='agenda'>
       <h1>Agendamento</h1>
       <div className="container-agenda">
         <div className="map-container">
@@ -29,7 +29,7 @@ const Agenda = () => {
         </div>
         <div className="btn-container">
           {/* Botão de agendamento que direciona para a página de agendamento */}
-          <a href='#' className="btn btn-primary">Agendar Agora!</a>
+          <a href='#' className="btn btn-info">Agendar Agora!</a>
         </div>
       </div>
     </section>

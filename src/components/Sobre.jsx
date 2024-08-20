@@ -19,13 +19,13 @@ const Sobre = () => {
       <h1>Sobre</h1>
       <div className="container-sobre container d-flex flex-row">
         <div className="d-flex flex-column align-items-center justify-content-center text-sobre">
-          <h3>
+          <p>
             Siga-nos no Instagram para mais conteúdo exclusivo! <br />
             Quer mais atualizações, dicas e inspiração? Siga nossa jornada no Instagram e faça parte da nossa comunidade!
             📸 dinizbarbershopp<br />
             Descubra histórias por trás dos bastidores, promoções exclusivas e muito mais. Não perca nenhum detalhe!<br />
             Siga-nos agora mesmo para estar sempre conectado. Estamos ansiosos para interagir com você!
-          </h3>
+          </p>
           <a href="https://www.instagram.com/dinizbarbershopp/" className="btn btn-info">Instagram</a>
         </div>
         <InstagramFeed /> {/* Componente que exibe o feed do Instagram */}

@@ -28,7 +28,7 @@
 }
 
 /* Estilo do texto principal e botão */
-.text-sobre h3 {
+.text-sobre p {
   text-align: center;
   font-size: 100%;
   padding: 10%;
@@ -42,13 +42,15 @@
   margin-top: 10px;
   border-radius: 22px;
 }
-
+.text-sobre a:hover {
+  padding: 10px 20%;
+}
 /* Estilos responsivos para telas menores */
 @media (max-width: 992px) {
   #sobre {
     margin: 50% 2%;
   }
-  .text-sobre h3 {
+  .text-sobre p {
     font-size: 100%;
   }
   .container-sobre {
