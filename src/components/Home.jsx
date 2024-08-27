@@ -26,17 +26,13 @@ const Home = () => {
           </h2>
 
           {/* Link para a seção de agendamento */}
-          <Link
+          <a
             className="btn btn-info"
             id="botao"
-            to="agenda"
-            smooth={true}
-            duration={1000}
-            offset={-82}
-            aria-disabled="true"
+            href="https://www.barberbook.com.br/43"
           >
             Agende Online
-          </Link>
+          </a>
         </div>
       </div>
     </section>

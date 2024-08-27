@@ -12,10 +12,11 @@
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
   color: var(--branco);
+  
 }
 html,body,#root{
   background-color: var(--fundo);
-  max-width: 100vw;
+  max-width: 100%;
   height: 100%;
 }
   

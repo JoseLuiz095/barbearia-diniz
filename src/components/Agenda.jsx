@@ -19,7 +19,7 @@ const Agenda = () => {
         <div className="map-container">
           {/* Iframe para exibição do Google Maps, mostrando a localização da barbearia */}
           <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7481.604451680747!2d-43.679891852842864!3d-20.349787409483035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa407bf5af350d3%3A0xfd1bd2073007f6fd!2sDiniz%20Barbershop!5e0!3m2!1spt-BR!2sbr!4v1723742393541!5m2!1spt-BR!2sbr" 
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7481.622391024923!2d-43.671318!3d-20.349417000000003!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa407bf5af350d3%3A0xfd1bd2073007f6fd!2sDiniz%20Barbershop!5e0!3m2!1spt-BR!2sbr!4v1724180864447!5m2!1spt-BR!2sbr"
             title="Localização da Barbearia Diniz" // Descrição do iframe para SEO e acessibilidade
             allowFullScreen="" // Permite que o mapa seja exibido em tela cheia
             className='localização'
@@ -29,7 +29,7 @@ const Agenda = () => {
         </div>
         <div className="btn-container">
           {/* Botão de agendamento que direciona para a página de agendamento */}
-          <a href='#' className="btn btn-info">Agendar Agora!</a>
+          <a href="https://www.barberbook.com.br/43" className="btn btn-info">Agendar Agora!</a>
         </div>
       </div>
     </section>

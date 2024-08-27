@@ -11,6 +11,11 @@
 .navbar_container {
   display: block;
 }
+/* Remoção do Scroll do Eixo-x */
+body {
+  overflow-x: hidden; 
+  scroll-behavior: smooth; 
+}
 
 /* Estilos da barra de navegação */
 .navbar {
