@@ -1,47 +1,29 @@
 /* Estilos para a seção Home */
-
-/* Estilos gerais da seção */
 #home {
-    margin-top: 82px;
+    margin-top: 108px;
     max-width: 100%;
 }
 
-/* Estilo da imagem de capa */
-.capa {
-    padding: 4%;
+.img-card {
+    border-radius: 12px;
+    max-height: 46vh;
+    position: relative;
+    z-index: 1; /* Certifique-se de que a imagem esteja abaixo da div aurelia */
 }
 
-/* Estilo do container de texto promocional */
-.gatilho {
-    margin: 10% 5%;
+.aurelia {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    right: 8px;
+    bottom: 8px;
+    border: 4px solid #507dbc9f ;
+    border-radius: 12px; /* Match the border radius of the image */
+    z-index: 2; /* Certifique-se de que a aurelia esteja sobreposta à imagem */
+    pointer-events: none; /* Para garantir que a aurelia não interfira em interações com a imagem */
 }
-
-/* Estilo do texto e botão dentro do container promocional */
-.gatilho h2, 
-.gatilho #botao {
-    font-weight: bold;
-    padding-bottom: 10%;
-    font-size: 120%;
-    text-align: center;
-}
-
-/* Estilo específico para o botão de agendamento */
-.gatilho #botao {
-    font-size: 120%;
-    padding: 2% 10%;
-    margin-top: 10px;
-    border-radius: 22px;
-}
-
-/* Responsividade para dispositivos menores */
-@media (max-width: 992px) {
-    .container-capa {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-    #home {
-        margin: 25% 0;
+@media (min-width: 992px) {
+    .img-card {
+        max-height: 75vh;
     }
 }

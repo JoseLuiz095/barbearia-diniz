@@ -35,9 +35,4 @@
   border-bottom-color: var(--branco);
 }
 
-/* Estilos responsivos para dispositivos menores */
-@media (max-width: 992px) {
-  .footer {
-      margin-top: 30%; /* Ajusta a margem superior em telas menores */
-  }
-}
+

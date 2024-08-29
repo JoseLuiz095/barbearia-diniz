@@ -9,11 +9,11 @@
 
 /* Estilo da seção 'Sobre' */
 #sobre {
-  position: relative; 
+  
   border-radius: 22px;
   background-color: var(--contraste-de-fundo);
   padding: 4%;
-  margin: 6% 1%;
+  margin: 15% 2%;
   max-width: 100%;
 }
 
@@ -47,9 +47,7 @@
 }
 /* Estilos responsivos para telas menores */
 @media (max-width: 992px) {
-  #sobre {
-    margin: 50% 2%;
-  }
+
   .text-sobre p {
     font-size: 100%;
   }
