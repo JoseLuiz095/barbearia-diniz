@@ -12,10 +12,8 @@ const Footer = () => {
 
     return (
         // Footer da página com efeito de animação condicional
-        <footer ref={ref} className={`footer ${inView ? 'zoomInUp' : ''}`} >
-            <section>
-                {/* Seção adicional pode ser utilizada para links ou informações extras */}
-            </section>
+        <footer ref={ref} className={`footer`} >
+            
             <p>
                 {/* Texto de copyright com link para o portfólio */}
                 © Copyright 2024 – Barbearia do Diniz – Todos os direitos reservados – 

@@ -42,28 +42,25 @@ const Navbar = () => {
 
     return (
         <div className="navbar_container">
-            <nav className="navbar navbar-expand-lg bg-body-tertiary fixed-top">
-                <div className="container-fluid">
-                    <a className="navbar-brand d-flex align-items-center" href="##">
+            <nav className="navbar navbar-expand bg-body-tertiary fixed-top">
+                <div className="container-center">
+                    <Link className="navbar-brand d-flex align-items-center"  href="#home"
+                    to="home"
+                    smooth={true}
+                    duration={1000}
+                    offset={-96}
+                    onClick={() => setIsNavCollapsed(true)}
+                    >
                         <img
                             src={logo}
                             alt="Logo da barbearia Diniz"
-                            width="40"
-                            height="40"
+                            width="42"
+                            height="42"
                             className='img'
                         />
-                        <h1>Barbearia do Diniz</h1>
-                    </a>
-                    <button
-                        className="navbar-toggler"
-                        type="button"
-                        onClick={handleTogglerClick}
-                        aria-controls="navbarTogglerDemo03"
-                        aria-expanded={!isNavCollapsed}
-                        aria-label="Toggle navigation"
-                    >
-                        {isNavCollapsed ? <FaBars size={24} /> : <FaTimes size={24} />}
-                    </button>
+                        <h1>Barbearia Diniz</h1>
+                    </Link>
+                    <hr className="barra"/>
                     <div className={`${isNavCollapsed ? 'collapse' : 'show'} navbar-collapse justify-content-lg-end`} id="navbarTogglerDemo03">
                         <ul className="navbar-nav">
                             <li className="nav-item">
@@ -73,7 +70,7 @@ const Navbar = () => {
                                     to="home"
                                     smooth={true}
                                     duration={1000}
-                                    offset={-82}
+                                    offset={-96}
                                     onClick={() => setIsNavCollapsed(true)}
                                 >
                                     Home
@@ -86,7 +83,7 @@ const Navbar = () => {
                                     to="sobre"
                                     smooth={true}
                                     duration={1000}
-                                    offset={-82}
+                                    offset={-130}
                                     onClick={() => setIsNavCollapsed(true)}
                                 >
                                     Sobre
@@ -99,7 +96,7 @@ const Navbar = () => {
                                     to="feedBack"
                                     smooth={true}
                                     duration={1000}
-                                    offset={-82}
+                                    offset={-130}
                                     onClick={() => setIsNavCollapsed(true)}
                                 >
                                     FeedBack
@@ -112,7 +109,7 @@ const Navbar = () => {
                                     to="agenda"
                                     smooth={true}
                                     duration={1000}
-                                    offset={-82}
+                                    offset={-130}
                                     onClick={() => setIsNavCollapsed(true)}
                                 >
                                     Agendamento

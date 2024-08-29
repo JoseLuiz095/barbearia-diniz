@@ -14,10 +14,12 @@
   color: var(--branco);
   
 }
-html,body,#root{
-  background-color: var(--fundo);
-  max-width: 100%;
+
+html, body, #root {
   height: 100%;
+  width: 100%;
+  background: url('./img/fundo.jpg') no-repeat center center fixed;
+  background-size: cover;
 }
   
 ::-webkit-scrollbar {
