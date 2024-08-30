@@ -1,16 +1,23 @@
 /* Estilos para a seção Home */
 #home {
-    margin-top: 108px;
+    margin-top: 8rem;
     max-width: 100%;
 }
 
 .img-card {
     border-radius: 12px;
-    max-height: 46vh;
+    min-height: 450px;
+    max-height: 450px;
     position: relative;
     z-index: 1; /* Certifique-se de que a imagem esteja abaixo da div aurelia */
 }
-
+.carousel-control-prev-icon,
+.carousel-control-next-icon{
+    background-color: var(--azul);
+    border-radius: 20%;
+    opacity: 1;
+    
+}
 .aurelia {
     position: absolute;
     top: 8px;

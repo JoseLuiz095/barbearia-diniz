@@ -4,7 +4,7 @@ import { useInView } from 'react-intersection-observer';
 // Importação de imagens e vídeos
 import logo from '../img/logo.png';
 import post01 from '../img/post01-instagramFeed.jpg';
-import post02 from '../img/post02-instagramFeed.jpg';
+import post02 from '../img/post03-instagramFeed.jpg';
 import post03 from '../img/post03-instagramFeed.jpg';
 import post04 from '../img/post04-instagramFeed.mp4';
 import circuloStorys from '../img/circulo-InstagramFeed.png';
