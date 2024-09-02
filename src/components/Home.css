@@ -1,34 +1,72 @@
-/* Estilos para a seção Home */
 #home {
     margin-top: 8rem;
     max-width: 100%;
 }
 
-.img-card {
-    border-radius: 12px;
-    min-height: 450px;
+.carousel-inner {
     max-height: 450px;
-    position: relative;
-    z-index: 1; /* Certifique-se de que a imagem esteja abaixo da div aurelia */
 }
+
+.img-card-home {
+    border-radius: 12px;
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    object-position: center;
+    position: relative;
+    z-index: 1;
+}
+
+.carousel-caption {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border-radius: 12px;
+    color: #fff; /* Cor do texto */
+    z-index: 3;
+    text-align: center;
+    width: 80%;
+    /* background-color: var(--contraste-de-fundo); */
+}
+.top {
+    top: 20%;
+}
+.center{
+    top: 60%;
+}
+.bottom{
+    top: 80%;
+}
+
+.carousel-caption h2 ,
+.carousel-caption .btn-home{
+    font-size: 100%;
+    margin-bottom: 15px; /* Espaço entre o texto e o botão */
+}
+
+
+
 .carousel-control-prev-icon,
-.carousel-control-next-icon{
+.carousel-control-next-icon {
     background-color: var(--azul);
     border-radius: 20%;
     opacity: 1;
-    
 }
+
 .aurelia {
     position: absolute;
     top: 8px;
     left: 8px;
     right: 8px;
     bottom: 8px;
-    border: 4px solid #507dbc9f ;
-    border-radius: 12px; /* Match the border radius of the image */
-    z-index: 2; /* Certifique-se de que a aurelia esteja sobreposta à imagem */
-    pointer-events: none; /* Para garantir que a aurelia não interfira em interações com a imagem */
+    border: 4px solid #507dbc9f;
+    border-radius: 12px;
+    z-index: 2;
+    pointer-events: none;
 }
+
 @media (min-width: 992px) {
     .img-card {
         max-height: 75vh;
