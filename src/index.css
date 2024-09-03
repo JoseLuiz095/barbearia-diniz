@@ -1,7 +1,7 @@
 :root {
   --vermelho: #EE2C3F;
   --amarelo: #F9CB40;
-  --azul: #507DBC;
+  --azul: #507dbc;
   --contraste-de-fundo: #0E111A;
   --fundo: #000000;
   --branco: #ffff;
@@ -83,6 +83,19 @@ html, body, #root {
 .btn-info:hover{
   background-color: transparent;
   border: solid 1px  var(--azul);
+  color: var(--branco);
+
+}
+.btn-outline-light{
+  background-color: transparent;
+  border: 2px solid var(--azul);
+  padding: 0 6%;
+  border-radius: 22px;
+  transition: .5s;
+}
+.btn-outline-light:hover{
+  background-color: var(--azul);
+  border: solid 2px  var(--azul);
   color: var(--branco);
 
 }
@@ -246,8 +259,8 @@ html, body, #root {
 .zoomInUp {
   -webkit-animation-name: zoomInUp;
   animation-name: zoomInUp;
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
   }
@@ -290,8 +303,8 @@ html, body, #root {
     backface-visibility: visible !important;
     -webkit-animation-name: flipInY;
     animation-name: flipInY;
-    -webkit-animation-duration: 1s;
-    animation-duration: 1s;
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
     }

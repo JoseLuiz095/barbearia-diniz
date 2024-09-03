@@ -1,0 +1,56 @@
+.fixed-button {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: var(--azul);
+  border: 2px solid var(--branco);
+  padding: 8px 12px;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+  border-radius: 5px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  transition: 1s;
+}
+
+span {
+  display: none;
+  margin-left: 8px; 
+  transition: 1s;
+}
+
+.fixed-button:hover span {
+  display: inline-block;
+  animation: slideInRight 0.8s forwards;
+}
+
+.fixed-button:not(:hover) span {
+  animation: slideOutRight 0.8s forwards;
+}
+
+/* Animação de entrada */
+@keyframes slideInRight {
+  0% {
+      transform: translateX(100%);
+      visibility: visible;
+  }
+  100% {
+      transform: translateX(0);
+  }
+}
+
+/* Animação de saída */
+@keyframes slideOutRight {
+  0% {
+      transform: translateX(0);
+  }
+  100% {
+      transform: translateX(100%);
+      visibility: hidden;
+  }
+}

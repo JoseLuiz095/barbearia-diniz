@@ -1,3 +1,4 @@
+// src/App.jsx
 import React from 'react';
 import { Element } from 'react-scroll';
 import Navbar from './components/Navbar';
@@ -7,6 +8,7 @@ import FeedBack from './components/FeedBack';
 import Agendamento from './components/Agenda';
 import Footer from './components/Footer';
 import SectionWrapper from './components/SectionWrapper';
+import FixedButton from './components/FixedButton'; // Importando o botão fixo
 
 const App = () => {
   return (
@@ -34,7 +36,8 @@ const App = () => {
           </SectionWrapper>
         </Element>
       </div>
-      <Footer/>
+      <Footer />
+      <FixedButton /> 
     </>
   );
 }

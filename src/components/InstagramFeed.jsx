@@ -2,9 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 
 // Importação de imagens e vídeos
-import logo from '../img/logo.jpeg';
+import logo from '../img/logo.png';
 import post01 from '../img/post01-instagramFeed.jpg';
-import post02 from '../img/post02-instagramFeed.jpg';
+import post02 from '../img/post03-instagramFeed.jpg';
 import post03 from '../img/post03-instagramFeed.jpg';
 import post04 from '../img/post04-instagramFeed.mp4';
 import circuloStorys from '../img/circulo-InstagramFeed.png';
@@ -34,7 +34,7 @@ const InstagramFeed = () => {
           if (count === maxCount) {
             clearInterval(interval);
           }
-        }, 5);
+        }, 8);
       };
 
       incrementCount(setPostCount, 150);
@@ -44,7 +44,7 @@ const InstagramFeed = () => {
   }, [inView]);
 
   return (
-    <div ref={ref} className="instagram container mt-5">
+    <div ref={ref} className="instagram">
       {/* Seção de perfil do Instagram */}
       <div className="perfil d-flex align-items-center mb-4 flex-wrap">
         {/* Imagem de perfil e círculo de stories */}
@@ -58,7 +58,7 @@ const InstagramFeed = () => {
         </div>
         {/* Descrição do perfil */}
         <div className="descricao text-center text-md-start">
-          <h2 className="mb-2 ms-3">dinizbarbershopp</h2>
+          <h2 className="mb-2 ms-2">dinizbarbershopp</h2>
           <div className="d-flex justify-content-around align-items-center text-center">
             <span className="descricao-text"><strong>{postCount}</strong> publicações</span>
             <span className="descricao-text"><strong>{followersCount}</strong> seguidores</span>
