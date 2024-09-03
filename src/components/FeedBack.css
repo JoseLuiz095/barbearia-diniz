@@ -10,8 +10,11 @@
 #feedBack {
   max-width: 100%;
   height: 100%;
-  margin: 6% 1%;
+  margin: 5% 2%;
 }
+/* #feedBack .title{
+
+} */
 
 .carousel .card {
   background: transparent;
@@ -66,7 +69,7 @@
     font-size: 40%;
   }
   #feedBack {
-    margin: 80% 2%;
+    margin: 40% 2%;
   }
 }
 

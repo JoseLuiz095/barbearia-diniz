@@ -70,7 +70,7 @@ const Navbar = () => {
                                 to="home"
                                 smooth={true}
                                 duration={1000}
-                                offset={-96}
+                                offset={-200}
                                 onClick={() => setIsNavCollapsed(true)}
                             >
                                 Home

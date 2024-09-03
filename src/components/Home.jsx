@@ -19,7 +19,7 @@ const Home = () => {
             <div className="img-wrapper">
               <img src={post01} className="img-card-home d-block " alt="..." />
               <div className="aurelia"></div>
-              <div className="carousel-caption center">
+              <div className="carousel-caption fundo-caption center">
                 <h2>Agende seu horário agora!</h2>
                 <a href="https://www.barberbook.com.br/43" className="btn btn-outline-light btn-home">Agendar</a>
               </div>
@@ -29,7 +29,7 @@ const Home = () => {
             <div className="img-wrapper">
               <img src={post02} className="img-card-home d-block " alt="..." />
               <div className="aurelia"></div>
-              <div className="carousel-caption">
+              <div className="carousel-caption fundo-caption">
                 <h2>Seu novo visual está a um clique!</h2>
                 <a href="https://www.barberbook.com.br/43" className="btn btn-outline-light btn-home">Agendar</a>
               </div>
@@ -39,7 +39,7 @@ const Home = () => {
             <div className="img-wrapper">
               <img src={post03} className="img-card-home d-block " alt="..." />
               <div className="aurelia"></div>
-              <div className="carousel-caption">
+              <div className="carousel-caption fundo-caption">
                 <h2>Transforme seu estilo conosco!</h2>
                 <a href="https://www.barberbook.com.br/43" className="btn btn-outline-light btn-home">Agendar</a>
               </div>
@@ -49,22 +49,22 @@ const Home = () => {
             <div className="img-wrapper">
               <img src={post04} className="img-card-home d-block " alt="..." />
               <div className="aurelia"></div>
-              <div className="carousel-caption ">
+              <div className="carousel-caption fundo-caption ">
                 <h2>Reserve seu horário hoje mesmo!</h2>
                 <a href="https://www.barberbook.com.br/43" className="btn btn-outline-light btn-home">Agendar</a>
               </div>
             </div>
           </div>
-          <div className="carousel-item">
+          {/* <div className="carousel-item">
             <div className="img-wrapper">
               <img src={post05} className="img-card-home d-block " alt="..." />
               <div className="aurelia"></div>
-              <div className="carousel-caption center">
+              <div className="carousel-caption fundo-caption center">
                 <h2>Estamos prontos para te atender!</h2>
                 <a href="https://www.barberbook.com.br/43" className="btn btn-outline-light btn-home">Agendar</a>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
         <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="prev">
           <span className="carousel-control-prev-icon" aria-hidden="true"></span>

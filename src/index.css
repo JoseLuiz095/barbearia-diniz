@@ -259,8 +259,8 @@ html, body, #root {
 .zoomInUp {
   -webkit-animation-name: zoomInUp;
   animation-name: zoomInUp;
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
   }
@@ -303,8 +303,8 @@ html, body, #root {
     backface-visibility: visible !important;
     -webkit-animation-name: flipInY;
     animation-name: flipInY;
-    -webkit-animation-duration: 1s;
-    animation-duration: 1s;
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
     }

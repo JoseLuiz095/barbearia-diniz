@@ -4,31 +4,39 @@ import { useInView } from 'react-intersection-observer';
 import "./Sobre.css";
 
 const Sobre = () => {
-  // Hook para detectar quando a seção entra na viewport
   const { ref, inView } = useInView({
-    triggerOnce: true, // Garante que a animação ocorra apenas uma vez
-    threshold: 0.3,    // 30% do componente visível antes de disparar
+    triggerOnce: true,
+    threshold: 0.3,
   });
 
   return (
     <section
       ref={ref}
-      className={`${inView ? 'flipInY' : ''}`} // Adiciona classe de animação se visível
+      className={`${inView ? 'flipInY' : ''}`}
       id='sobre'
     >
       <h1>Sobre</h1>
-      <div className="container-sobre container d-flex flex-row">
-        <div className="d-flex flex-column align-items-center justify-content-center text-sobre">
-          <p>
-            Siga-nos no Instagram para mais conteúdo exclusivo! <br />
-            Quer mais atualizações, dicas e inspiração? Siga nossa jornada no Instagram e faça parte da nossa comunidade!
-            📸 dinizbarbershopp<br />
-            Descubra histórias por trás dos bastidores, promoções exclusivas e muito mais. Não perca nenhum detalhe!<br />
-            Siga-nos agora mesmo para estar sempre conectado. Estamos ansiosos para interagir com você!
-          </p>
-          <a href="https://www.instagram.com/dinizbarbershopp/" className="btn btn-info">Instagram</a>
+      <div className="container-sobre container d-flex flex-column flex-lg-row justify-content-around align-items-center p-4">
+        <div className="text-sobre d-flex flex-column align-items-center justify-content-evenly">
+          <article className="d-flex flex-column align-items-center">
+            <i className="bi bi-emoji-smile"></i>
+            <p>MAIS DE 500 CLIENTES SATISFEITOS</p>
+            <span>DESDE 2018</span>
+          </article>
+          <article className="d-flex flex-column align-items-center">
+            <i className="bi bi-scissors"></i>
+            <p>SERVIÇOS PREMIUM DE BARBEARIA</p>
+            <span>QUALIDADE GARANTIDA</span>
+          </article>
+          <article className="d-flex flex-column align-items-center">
+            <i className="bi bi-calendar-check"></i>
+            <p>HORÁRIOS FLEXÍVEIS</p>
+            <span>AGENDAMENTO FÁCIL</span>
+          </article>
         </div>
-        <InstagramFeed /> {/* Componente que exibe o feed do Instagram */}
+        <a href="https://www.instagram.com/dinizbarbershopp/" className="instagram-sobre h-100 ">
+          <InstagramFeed /> 
+        </a>
       </div>
     </section>
   );
