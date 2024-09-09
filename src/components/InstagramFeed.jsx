@@ -82,8 +82,14 @@ const InstagramFeed = () => {
             muted
             loop
             playsInline
-            alt="Postagem do instagram 03"
-          />
+            aria-label="Vídeo de uma postagem do Instagram"
+          >
+            <track
+              kind="metadata"
+              label="Sem legendas"
+            />
+
+          </video>
         </div>
       </div>
     </div>

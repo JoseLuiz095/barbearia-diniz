@@ -73,11 +73,11 @@ const Home = () => {
           </div> */}
         </div>
         {/* Botões de navegação para o carrossel (anterior e próximo) */}
-        <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="prev">
+        <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="prev" aria-label="Slide anterior">
           <span className="carousel-control-prev-icon" aria-hidden="true"></span>
           <span className="visually-hidden">Anterior</span>
         </button>
-        <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="next">
+        <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="next" aria-label="Slide seguinte">
           <span className="carousel-control-next-icon" aria-hidden="true"></span>
           <span className="visually-hidden">Próximo</span>
         </button>
