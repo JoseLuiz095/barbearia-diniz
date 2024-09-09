@@ -4,7 +4,6 @@ import { useInView } from 'react-intersection-observer';
 // Importação de imagens e vídeos
 import logo from '../img/logo.png';
 import post02 from '../img/post03-instagramFeed.jpg';
-import post03 from '../img/post03-instagramFeed.jpg';
 import post04 from '../img/post04-instagramFeed.mp4';
 import post06 from '../img/post06-instagramFeed.jpg';
 import circuloStorys from '../img/circulo-InstagramFeed.png';
@@ -58,7 +57,7 @@ const InstagramFeed = () => {
         </div>
         {/* Descrição do perfil */}
         <div className="descricao text-center text-md-start">
-          <h2 className="mb-2 ms-2">dinizbarbershopp</h2>
+          <h1 className="mb-2 ms-2">dinizbarbershopp</h1>
           <div className="d-flex justify-content-around align-items-center text-center">
             <span className="descricao-text"><strong>{postCount}</strong> publicações</span>
             <span className="descricao-text"><strong>{followersCount}</strong> seguidores</span>
@@ -70,10 +69,10 @@ const InstagramFeed = () => {
       {/* Grid de posts do Instagram */}
       <div className="row g-2 posts">
         <div className="col-4 col-sm-4 col-md-4">
-          <img src={post06} alt="Post 1" className="img-fluid img-post" />
+          <img src={post06} alt="Postagem do instagram 01" className="img-fluid img-post" />
         </div>
         <div className="col-4 col-sm-4 col-md-4">
-          <img src={post02} alt="Post 2" className="img-fluid img-post" />
+          <img src={post02} alt="Postagem do instagram 02" className="img-fluid img-post" />
         </div>
         <div className="col-4 col-sm-4 col-md-4">
           <video
@@ -83,7 +82,7 @@ const InstagramFeed = () => {
             muted
             loop
             playsInline
-            alt="Post 4"
+            alt="Postagem do instagram 03"
           />
         </div>
       </div>

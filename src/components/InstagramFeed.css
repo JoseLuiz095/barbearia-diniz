@@ -34,7 +34,7 @@
   flex: 1;
   width: 10%;
 }
-.descricao h2{
+.descricao h1{
   font-size: 150%;
 }
 
@@ -76,7 +76,7 @@
     margin-top: 5%;
     margin-left: 0 !important;
   }
-  .descricao h2 {
+  .descricao h1 {
     margin: 0 0 .5rem 0;
   }
   /* Estilo para o círculo de stories */

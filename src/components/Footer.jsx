@@ -1,18 +1,11 @@
 // Importando o CSS e bibliotecas necessárias
 import './Footer.css';
 import React from 'react';
-import { useInView } from 'react-intersection-observer';
 
 const Footer = () => {
-    // Hook para detecção de visibilidade do footer
-    const { ref, inView } = useInView({
-        triggerOnce: true, // Garante que a animação ocorra apenas uma vez
-        threshold: 0.3,    // 30% do componente precisa estar visível para disparar
-    });
-
+    
     return (
-        // Footer da página com efeito de animação condicional
-        <footer ref={ref} className={`footer`} >
+        <footer className={`footer`} >
             
             <p>
                 {/* Texto de copyright com link para o portfólio */}

@@ -1,12 +1,3 @@
-:root {
-  --vermelho: #EE2C3F;
-  --amarelo: #F9CB40;
-  --azul: #507DBC;
-  --contraste-de-fundo: #0E111A;
-  --fundo: #000000;
-  --branco: #ffff;
-}
-
 /* Container para a barra de navegação */
 .navbar_container {
   display: block;

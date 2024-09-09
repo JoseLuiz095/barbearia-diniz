@@ -1,9 +1,3 @@
-:root {
-  --contraste-de-fundo: #0E111A;
-  --azul: #507DBC;
-  --branco: #ffffff;
-}
-
 /* Estilo geral do footer */
 .footer {
   background-color: var(--contraste-de-fundo);

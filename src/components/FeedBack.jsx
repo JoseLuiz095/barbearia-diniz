@@ -71,10 +71,10 @@ const FeedBack = () => {
     // Componente FeedBack com animação ao se tornar visível
     <section ref={ref} className={inView ? 'zoomInUp' : ''} id="feedBack">
       <div className="text-center">
-        <h2 className="title">FeedBack</h2>
+        <h1>FeedBack</h1>
       </div>
       {/* Carrossel de feedbacks dos clientes */}
-      <Slider {...settings} className="carousel">
+      <Slider {...settings} className="carousel" aria-label="Carrossel de feedbacks de clientes">
         {feedbacks.map((feedback) => (
           <div key={feedback.id}>
             <div className="card">
