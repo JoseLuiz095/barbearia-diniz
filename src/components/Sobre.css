@@ -16,7 +16,7 @@
 }
 
 /* Estilo do título */
-#sobre h2 {
+#sobre h1 {
   color: var(--branco);
   font-weight: bold;
   margin-bottom: 20px;  

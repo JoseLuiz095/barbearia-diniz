@@ -58,7 +58,7 @@ const InstagramFeed = () => {
         </div>
         {/* Descrição do perfil */}
         <div className="descricao text-center text-md-start">
-          <h2 className="mb-2 ms-2">dinizbarbershopp</h2>
+          <h1 className="mb-2 ms-2">dinizbarbershopp</h1>
           <div className="d-flex justify-content-around align-items-center text-center">
             <span className="descricao-text"><strong>{postCount}</strong> publicações</span>
             <span className="descricao-text"><strong>{followersCount}</strong> seguidores</span>

@@ -15,7 +15,7 @@ const Sobre = () => {
       className={`${inView ? 'flipInY' : ''}`}
       id='sobre'
     >
-      <h2>Sobre</h2>
+      <h1>Sobre</h1>
       <div className="container-sobre container d-flex flex-column flex-lg-row justify-content-around align-items-center p-4">
         <div className="text-sobre d-flex flex-column align-items-center justify-content-evenly">
           <article className="d-flex flex-column align-items-center">

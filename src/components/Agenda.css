@@ -14,7 +14,7 @@
   background-color: var(--contraste-de-fundo);
   max-width: 100%;
   padding: 2%;
-  margin: 5% 2% 42% 2%;
+  margin: 5% 2% 4% 2%;
 }
 
 /* Título da seção de agendamento */
@@ -34,7 +34,7 @@
 
 /* Estilos para o iframe do Google Maps */
 .localizacao  {
-  width: 100%;
+  width: 35vw;
   border: none;
   height: 225px;
   margin-bottom: 15px;
@@ -48,6 +48,7 @@
   justify-content: start;
   margin-bottom: 10px;
   text-decoration: none;
+  align-items: baseline;
 }
 .contact-agendamento p{
   padding-left: 2%;
@@ -62,9 +63,10 @@
 @media (max-width: 992px) {
   #agenda {
     margin: 40% 2% 4% 2%;
-  
   }
-  
+  .localizacao  {
+    width: 50vw;
+  }
   .container-agenda {
     display: flex;
     flex-direction: column;
@@ -74,7 +76,6 @@
   .contact-agendamento{
     display: flex;
     justify-content: center;
-    align-items: center;
   }
 
   .map-container {
