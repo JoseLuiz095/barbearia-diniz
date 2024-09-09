@@ -20,7 +20,7 @@ const Home = () => {
               <img src={post01} className="img-card-home d-block " alt="..." />
               <div className="aurelia"></div>
               <div className="carousel-caption fundo-caption center">
-                <h2>Agende seu horário agora!</h2>
+                <h1>Agende seu horário agora!</h1>
                 <a href="https://www.barberbook.com.br/43" className="btn btn-outline-light btn-home">Agendar</a>
               </div>
             </div>
@@ -30,7 +30,7 @@ const Home = () => {
               <img src={post02} className="img-card-home d-block " alt="..." />
               <div className="aurelia"></div>
               <div className="carousel-caption fundo-caption">
-                <h2>Seu novo visual está a um clique!</h2>
+                <h1>Seu novo visual está a um clique!</h1>
                 <a href="https://www.barberbook.com.br/43" className="btn btn-outline-light btn-home">Agendar</a>
               </div>
             </div>
@@ -40,7 +40,7 @@ const Home = () => {
               <img src={post03} className="img-card-home d-block " alt="..." />
               <div className="aurelia"></div>
               <div className="carousel-caption fundo-caption">
-                <h2>Transforme seu estilo conosco!</h2>
+                <h1>Transforme seu estilo conosco!</h1>
                 <a href="https://www.barberbook.com.br/43" className="btn btn-outline-light btn-home">Agendar</a>
               </div>
             </div>
@@ -50,7 +50,7 @@ const Home = () => {
               <img src={post04} className="img-card-home d-block " alt="..." />
               <div className="aurelia"></div>
               <div className="carousel-caption fundo-caption ">
-                <h2>Reserve seu horário hoje mesmo!</h2>
+                <h1>Reserve seu horário hoje mesmo!</h1>
                 <a href="https://www.barberbook.com.br/43" className="btn btn-outline-light btn-home">Agendar</a>
               </div>
             </div>
@@ -60,7 +60,7 @@ const Home = () => {
               <img src={post05} className="img-card-home d-block " alt="..." />
               <div className="aurelia"></div>
               <div className="carousel-caption fundo-caption center">
-                <h2>Estamos prontos para te atender!</h2>
+                <h1>Estamos prontos para te atender!</h1>
                 <a href="https://www.barberbook.com.br/43" className="btn btn-outline-light btn-home">Agendar</a>
               </div>
             </div>

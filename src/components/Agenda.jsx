@@ -16,7 +16,6 @@ const Agenda = () => {
     <section ref={ref} className={`agenda ${inView ? 'flipInY' : ''}`} id='agenda'>
       <h1>Agendamento</h1>
       <div className="container-agenda">
-        <div className="map-container">
         <article className="d-flex flex-column align-items-center">
            <a href='#' className="contact-agendamento">
            <i class="bi bi-whatsapp"></i>
@@ -38,7 +37,6 @@ const Agenda = () => {
             <p>dinizbarbershopp31@gmail.com</p>
            </a>
           </article>
-        </div>
         <div className="d-flex flex-column justify-content-center align-items-center">
           {/* Iframe para exibição do Google Maps, mostrando a localização da barbearia */}
           <iframe 
