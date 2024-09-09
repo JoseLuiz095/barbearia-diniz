@@ -1,7 +1,7 @@
 .fixed-button {
   position: fixed;
   right: 0;
-  top: 50%;
+  top: 89%;
   transform: translateY(-50%);
   background-color: var(--azul);
   border: 2px solid var(--branco);
