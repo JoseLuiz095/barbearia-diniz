@@ -51,7 +51,7 @@ const FeedBack = () => {
       {
         breakpoint: 768, // Para telas de até 768px de largura
         settings: {
-          slidesToShow: 3,
+          slidesToShow: 1,
           slidesToScroll: 1,
           dots: true
         }
@@ -59,7 +59,7 @@ const FeedBack = () => {
       {
         breakpoint: 480, // Para telas de até 480px de largura
         settings: {
-          slidesToShow: 3,
+          slidesToShow: 1,
           slidesToScroll: 1,
           dots: true
         }

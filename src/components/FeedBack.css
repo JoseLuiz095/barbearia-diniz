@@ -74,10 +74,10 @@
     margin: 40% 2%;
   }
   .carousel .card .text {
-    font-size: 60%;
+    font-size: 14px;
   }
   .carousel .card p {
-    font-size: 40%;
+    font-size: 12px;
   }
 }
 
