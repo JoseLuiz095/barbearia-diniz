@@ -5,7 +5,7 @@ import { useInView } from 'react-intersection-observer';
 import logo from '../img/logo.png';
 import post02 from '../img/post03-instagramFeed.jpg';
 import post04 from '../img/post04-instagramFeed.mp4';
-import post06 from '../img/post06-instagramFeed.jpg';
+import post06 from '../img/post06-instagramFeed.webp';
 import circuloStorys from '../img/circulo-InstagramFeed.png';
 
 import "./InstagramFeed.css";

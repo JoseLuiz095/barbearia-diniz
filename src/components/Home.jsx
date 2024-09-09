@@ -3,11 +3,11 @@ import "./Home.css";
 import React from 'react';
 
 // Importação de imagens utilizadas no carrossel
-import post01 from '../img/post01-instagramFeed.jpg';
+import post01 from '../img/post01-instagramFeed.webp';
 import post02 from '../img/post03-instagramFeed.jpg';
-import post03 from '../img/post04-instagramFeed.jpg';
-import post04 from '../img/post05-instagramFeed.jpg';
-import post05 from '../img/post06-instagramFeed.jpg';
+import post03 from '../img/post04-instagramFeed.webp';
+import post04 from '../img/post05-instagramFeed.webp';
+
 
 // Componente Home - seção inicial do site da Barbearia Diniz
 const Home = () => {
